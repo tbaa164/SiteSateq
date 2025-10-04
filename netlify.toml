@@ -7,10 +7,6 @@
   to = "/index.html"
   status = 200
 
-# Optimisation des images
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 # Configuration d'en-têtes pour la mise en cache
 [[headers]]
   for = "/*"
