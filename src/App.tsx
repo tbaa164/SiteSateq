@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
 import RouteScrollRestorer from "./components/RouteScrollRestorer";
+import RoutePreloader from "./components/RoutePreloader";
 import Index from "./pages/Index";
 
 import References from "./pages/References";
@@ -34,6 +35,7 @@ const App = () => (
         <BrowserRouter>
   <ScrollToTop />
   <RouteScrollRestorer />
+  <RoutePreloader />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* Route supprimée : mot-directeur */}
