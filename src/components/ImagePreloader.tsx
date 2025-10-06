@@ -26,6 +26,12 @@ const CRITICAL_IMAGES = [
   '/logos/digi.jpg',
   '/logos/communication2.png',
   
+  // Images de la section Actualités (TPE et Signatures)
+  '/logos/verifone1.png',
+  '/logos/signatureaustria.png',
+  '/logos/conventionintouch.png',
+  '/logos/S2m.png',
+  
   // Images additionnelles
   '/logos/logosite.png',
   '/logos/CryptoAg.jpg',

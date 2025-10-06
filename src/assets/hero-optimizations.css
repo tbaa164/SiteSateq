@@ -34,7 +34,12 @@ img[src="/logos/formation3.png"],
 img[src="/logos/commu.png"],
 img[src="/logos/quatrecartes.jpg"],
 img[src="/logos/Carte1.jpg"],
-img[src="/logos/identité1.png"] {
+img[src="/logos/identité1.png"],
+/* Images des actualités */
+img[src="/logos/verifone1.png"],
+img[src="/logos/signatureaustria.png"],
+img[src="/logos/conventionintouch.png"],
+img[src="/logos/S2m.png"] {
   contain: paint;
   content-visibility: auto;
   will-change: opacity, transform;

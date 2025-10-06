@@ -21,6 +21,11 @@
     <link rel="preload" href="/logos/LOGO-SATEQ-DIGITAL.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="/logos/systemereseauxHeaderNew.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="/logos/terminaux1.png" as="image" fetchpriority="high" />
+    <!-- Préchargement des images de la section Actualités -->
+    <link rel="preload" href="/logos/verifone1.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/signatureaustria.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/conventionintouch.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/S2m.png" as="image" fetchpriority="high" />
     
     <!-- Script de préchargement agressif pour les images Hero -->
     <script>
@@ -38,7 +43,12 @@
           '/logos/formation3.png',
           '/logos/commu.png',
           '/logos/quatrecartes.jpg',
-          '/logos/Carte1.jpg'
+          '/logos/Carte1.jpg',
+          // Images de la section Actualités
+          '/logos/verifone1.png',
+          '/logos/signatureaustria.png',
+          '/logos/conventionintouch.png',
+          '/logos/S2m.png'
         ];
         
         // Fonction plus agressive pour forcer le chargement
@@ -114,7 +124,12 @@
       img[src="/logos/formation3.png"],
       img[src="/logos/commu.png"],
       img[src="/logos/quatrecartes.jpg"],
-      img[src="/logos/Carte1.jpg"] {
+      img[src="/logos/Carte1.jpg"],
+      /* Images des actualités */
+      img[src="/logos/verifone1.png"],
+      img[src="/logos/signatureaustria.png"],
+      img[src="/logos/conventionintouch.png"],
+      img[src="/logos/S2m.png"] {
         content-visibility: auto;
         will-change: opacity, transform;
         transform: translateZ(0);

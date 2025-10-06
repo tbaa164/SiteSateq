@@ -12,7 +12,12 @@ const HERO_IMAGES = [
   '/logos/commu.png',
   '/logos/quatrecartes.jpg',
   '/logos/Carte1.jpg',
-  '/logos/identité1.png'
+  '/logos/identité1.png',
+  // Images de la section Actualités
+  '/logos/verifone1.png',
+  '/logos/signatureaustria.png',
+  '/logos/conventionintouch.png',
+  '/logos/S2m.png'
 ];
 
 /**

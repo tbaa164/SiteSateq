@@ -9,6 +9,7 @@ import RouteScrollRestorer from "./components/RouteScrollRestorer";
 import RoutePreloader from "./components/RoutePreloader";
 import ImagePreloader from "./components/ImagePreloader";
 import HeroImagesRenderer from "./components/HeroImagesRenderer";
+import NewsImagesPreloader from "./components/NewsImagesPreloader";
 import Index from "./pages/Index";
 
 import References from "./pages/References";
@@ -40,6 +41,7 @@ const App = () => (
   <RoutePreloader />
   <ImagePreloader />
   <HeroImagesRenderer />
+  <NewsImagesPreloader />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* Route supprimée : mot-directeur */}
