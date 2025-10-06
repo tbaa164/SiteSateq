@@ -253,7 +253,7 @@ const Actualites = () => {
                           }
                           alt={item.imageAlt || item.title}
                           className="w-full h-full object-cover hero-image"
-                          fetchpriority={item.id <= '4' ? "high" : "auto"}
+                          fetchPriority={item.id <= '4' ? "high" : "auto"}
                         />
                         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <ArrowRight className="w-6 h-6 text-white" />
@@ -298,7 +298,7 @@ const Actualites = () => {
                             "Signature AUTRIACARD-SATEQ"
                           }
                           className="max-w-full max-h-96 mb-6 object-contain hero-image"
-                          fetchpriority="high"
+                          fetchPriority="high"
                         />
                         <h2 className="text-2xl font-bold text-primary mb-4">
                           {selectedNewsId === "4" ? "Signature S2M-SATEQ" :

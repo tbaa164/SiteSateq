@@ -139,7 +139,10 @@ export default function Partners() {
                       <img 
                         src={`/logos/${partner.logo}`} 
                         alt={partner.name} 
-                        className="max-w-full max-h-full object-contain filter drop-shadow-sm" 
+                        className="max-w-full max-h-full object-contain filter drop-shadow-sm partner-logo" 
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="sync"
                         onError={(e) => {
                           // Fallback en cas d'échec de chargement de l'image
                           e.currentTarget.style.display = 'none';

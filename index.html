@@ -1,7 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+  <hea        // Précharge immédiate des images critiques des Hero sections
+        const criticalImages = [
+          '/logos/barriere.jpg',
+          '/logos/MrWane.jpg', 
+          '/logos/systemereseauxHeaderNew.jpg',
+          '/logos/terminaux1.png',
+          '/logos/digitalisation1.png',
+          '/logos/monetique1.png',
+          '/logos/formation1.png',
+          '/logos/formation3.png',
+          '/logos/commu.png',
+          '/logos/quatrecartes.jpg',
+          '/logos/Carte1.jpg',
+          // Images de la section Actualités
+          '/logos/verifone1.png',
+          '/logos/signatureaustria.png',
+          '/logos/conventionintouch.png',
+          '/logos/S2m.png',
+          // Logos des partenaires pour le carrousel
+          '/logos/Verifone.jpg',
+          '/logos/ixcom.jpg',
+          '/logos/entrust.jpg',
+          '/logos/schneider.jpg',
+          '/logos/CryptoAg.jpg',
+          '/logos/SeeTeec.jpg',
+          '/logos/sewacardindustrie.jpg',
+          '/logos/technopoint.jpg',
+          '/logos/TNexa.jpg'
+        ];t="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SATEQ Digital Group - Technologies Digitales en Afrique</title>
     <link rel="icon" href="public/logos/logosite.png" />
@@ -26,6 +53,12 @@
     <link rel="preload" href="/logos/signatureaustria.png" as="image" fetchpriority="high" />
     <link rel="preload" href="/logos/conventionintouch.png" as="image" fetchpriority="high" />
     <link rel="preload" href="/logos/S2m.png" as="image" fetchpriority="high" />
+    <!-- Préchargement des logos partenaires du carrousel -->
+    <link rel="preload" href="/logos/Verifone.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/ixcom.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/entrust.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/schneider.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/SeeTeec.jpg" as="image" fetchpriority="high" />
     
     <!-- Script de préchargement agressif pour les images Hero -->
     <script>
@@ -80,7 +113,9 @@
             '/logos/digi.jpg',
             '/logos/communication2.png',
             '/logos/formation2.jpg',
-            '/logos/identité1.png'
+            '/logos/identité1.png',
+            '/logos/agricole.png',
+            '/logos/Intouch.jpg'
           ];
           
           secondaryImages.forEach(url => {
