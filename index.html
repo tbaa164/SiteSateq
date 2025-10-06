@@ -16,15 +16,60 @@
     <meta property="og:type" content="website" />
 
     <!-- Préchargement des ressources critiques -->
-    <link rel="preload" href="/src/assets/tech-background.jpg" as="image" />
-    <link rel="preload" href="/src/assets/director-hero.png" as="image" />
-    <link rel="preload" href="/src/assets/team-work.jpg" as="image" />
-    <link rel="preload" href="/public/logos/MrWane.jpg" as="image" />
-    <link rel="preload" href="/src/assets/tech-solutions.jpg" as="image" />
+    <link rel="preload" href="/src/assets/tech-background.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/src/assets/director-hero.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/src/assets/team-work.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/public/logos/MrWane.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/src/assets/tech-solutions.jpg" as="image" fetchpriority="high" />
+    
+    <!-- Script de préchargement des images pour les Hero sections -->
+    <script>
+      // Précharger les images immédiatement, avant même que React ne soit chargé
+      (function() {
+        const imagesToPreload = [
+          '/public/logos/systemereseauxHeaderNew.jpg',
+          '/public/logos/femmeCarte.png',
+          '/public/logos/barriere.jpg',
+          '/public/logos/ingenierie.jpg',
+          '/public/logos/monetique1.png',
+          '/public/logos/monetique2.jpg',
+          '/public/logos/terminaux1.png',
+          '/public/logos/terminaux2.jpg',
+          '/public/logos/quatrecartes.jpg',
+          '/public/logos/formation1.png',
+          '/public/logos/formation2.jpg',
+          '/public/logos/digitalisation1.png'
+        ];
+        
+        imagesToPreload.forEach(src => {
+          const img = new Image();
+          img.src = src;
+        });
+      })();
+    </script>
 
     <meta name="twitter:card" content="summary_large_image" />
  
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- CSS critique pour éviter le flash de contenu non stylisé et accélérer les animations -->
+    <style>
+      .hero-background {
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+      .hero-animation {
+        will-change: opacity, transform;
+      }
+      .hero-image {
+        content-visibility: auto;
+      }
+      .content-container {
+        contain: layout style paint;
+      }
+    </style>
   </head>
 
   <body>

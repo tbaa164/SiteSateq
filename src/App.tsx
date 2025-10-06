@@ -7,6 +7,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
 import RouteScrollRestorer from "./components/RouteScrollRestorer";
 import RoutePreloader from "./components/RoutePreloader";
+import ImagePreloader from "./components/ImagePreloader";
 import Index from "./pages/Index";
 
 import References from "./pages/References";
@@ -36,6 +37,7 @@ const App = () => (
   <ScrollToTop />
   <RouteScrollRestorer />
   <RoutePreloader />
+  <ImagePreloader />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* Route supprimée : mot-directeur */}

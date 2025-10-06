@@ -1,0 +1,25 @@
+/* Optimisations pour éliminer la latence dans le rendu des Hero sections */
+
+/* Précharger les arrière-plans */
+.hero-background {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimisation des animations */
+.hero-animation {
+  will-change: opacity, transform;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Optimisation pour les images */
+.hero-image {
+  content-visibility: auto;
+}
+
+/* Style pour le conteneur principal des Hero sections */
+.content-container {
+  contain: layout style paint;
+}
