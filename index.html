@@ -26,6 +26,10 @@
     <link rel="preload" href="/logos/signatureaustria.png" as="image" fetchpriority="high" />
     <link rel="preload" href="/logos/conventionintouch.png" as="image" fetchpriority="high" />
     <link rel="preload" href="/logos/S2m.png" as="image" fetchpriority="high" />
+    <!-- Préchargement des images TPE -->
+    <link rel="preload" href="/logos/TPEF20FP.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/TPEVerifone.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/TPEMPOS.png" as="image" fetchpriority="high" />
     
     <!-- Script de préchargement agressif pour les images Hero -->
     <script>
@@ -48,7 +52,11 @@
           '/logos/verifone1.png',
           '/logos/signatureaustria.png',
           '/logos/conventionintouch.png',
-          '/logos/S2m.png'
+          '/logos/S2m.png',
+          // Images TPE
+          '/logos/TPEF20FP.png',
+          '/logos/TPEVerifone.png',
+          '/logos/TPEMPOS.png'
         ];
         
         // Fonction plus agressive pour forcer le chargement
@@ -129,7 +137,11 @@
       img[src="/logos/verifone1.png"],
       img[src="/logos/signatureaustria.png"],
       img[src="/logos/conventionintouch.png"],
-      img[src="/logos/S2m.png"] {
+      img[src="/logos/S2m.png"],
+      /* Images des terminaux TPE */
+      img[src="/logos/TPEF20FP.png"],
+      img[src="/logos/TPEVerifone.png"],
+      img[src="/logos/TPEMPOS.png"] {
         content-visibility: auto;
         will-change: opacity, transform;
         transform: translateZ(0);

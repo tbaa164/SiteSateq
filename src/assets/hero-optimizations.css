@@ -39,7 +39,11 @@ img[src="/logos/identité1.png"],
 img[src="/logos/verifone1.png"],
 img[src="/logos/signatureaustria.png"],
 img[src="/logos/conventionintouch.png"],
-img[src="/logos/S2m.png"] {
+img[src="/logos/S2m.png"],
+/* Images des terminaux TPE */
+img[src="/logos/TPEF20FP.png"],
+img[src="/logos/TPEVerifone.png"],
+img[src="/logos/TPEMPOS.png"] {
   contain: paint;
   content-visibility: auto;
   will-change: opacity, transform;

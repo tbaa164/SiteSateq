@@ -17,7 +17,11 @@ const HERO_IMAGES = [
   '/logos/verifone1.png',
   '/logos/signatureaustria.png',
   '/logos/conventionintouch.png',
-  '/logos/S2m.png'
+  '/logos/S2m.png',
+  // Images des terminaux TPE
+  '/logos/TPEF20FP.png',
+  '/logos/TPEVerifone.png',
+  '/logos/TPEMPOS.png'
 ];
 
 /**

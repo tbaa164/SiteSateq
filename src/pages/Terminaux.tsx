@@ -116,8 +116,8 @@ const Terminaux = () => {
                     <img 
                       src={item.img} 
                       alt={item.title} 
-                      className="h-full w-full object-contain p-2" 
-                      loading="lazy"
+                      className="h-full w-full object-contain p-2 hero-image" 
+                      fetchPriority="high"
                     />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-3 text-center">{item.title}</h3>
