@@ -15,37 +15,70 @@
     <meta property="og:description" content="Technologies digitales au service de l'économie numérique en Afrique" />
     <meta property="og:type" content="website" />
 
-    <!-- Préchargement des ressources critiques -->
-    <link rel="preload" href="/src/assets/tech-background.jpg" as="image" fetchpriority="high" />
-    <link rel="preload" href="/src/assets/director-hero.png" as="image" fetchpriority="high" />
-    <link rel="preload" href="/src/assets/team-work.jpg" as="image" fetchpriority="high" />
-    <link rel="preload" href="/public/logos/MrWane.jpg" as="image" fetchpriority="high" />
-    <link rel="preload" href="/src/assets/tech-solutions.jpg" as="image" fetchpriority="high" />
+    <!-- Préchargement des ressources critiques avec chemins exacts -->
+    <link rel="preload" href="/logos/barriere.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/MrWane.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/LOGO-SATEQ-DIGITAL.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/systemereseauxHeaderNew.jpg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/logos/terminaux1.png" as="image" fetchpriority="high" />
     
-    <!-- Script de préchargement des images pour les Hero sections -->
+    <!-- Script de préchargement agressif pour les images Hero -->
     <script>
-      // Précharger les images immédiatement, avant même que React ne soit chargé
-      (function() {
-        const imagesToPreload = [
-          '/public/logos/systemereseauxHeaderNew.jpg',
-          '/public/logos/femmeCarte.png',
-          '/public/logos/barriere.jpg',
-          '/public/logos/ingenierie.jpg',
-          '/public/logos/monetique1.png',
-          '/public/logos/monetique2.jpg',
-          '/public/logos/terminaux1.png',
-          '/public/logos/terminaux2.jpg',
-          '/public/logos/quatrecartes.jpg',
-          '/public/logos/formation1.png',
-          '/public/logos/formation2.jpg',
-          '/public/logos/digitalisation1.png'
+      // Précharge immédiate des images critiques des Hero sections
+      document.addEventListener('DOMContentLoaded', function() {
+        // Utilise les chemins exacts comme dans les composants
+        const criticalImages = [
+          '/logos/barriere.jpg',
+          '/logos/MrWane.jpg', 
+          '/logos/systemereseauxHeaderNew.jpg',
+          '/logos/terminaux1.png',
+          '/logos/digitalisation1.png',
+          '/logos/monetique1.png',
+          '/logos/formation1.png',
+          '/logos/formation3.png',
+          '/logos/commu.png',
+          '/logos/quatrecartes.jpg',
+          '/logos/Carte1.jpg'
         ];
         
-        imagesToPreload.forEach(src => {
-          const img = new Image();
-          img.src = src;
+        // Fonction plus agressive pour forcer le chargement
+        function preloadImage(url) {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = function() { resolve(url); };
+            img.onerror = function() { reject(url); };
+            img.src = url;
+            // Force le rendu en ajoutant temporairement à la page
+            img.style.position = 'absolute';
+            img.style.left = '-9999px';
+            img.style.top = '-9999px';
+            document.body.appendChild(img);
+            setTimeout(() => document.body.removeChild(img), 0);
+          });
+        }
+        
+        // Précharge avec priorité maximale
+        criticalImages.forEach(url => {
+          preloadImage(url);
         });
-      })();
+        
+        // Préchargement en arrière-plan après 100ms
+        setTimeout(() => {
+          const secondaryImages = [
+            '/logos/ingenierie.jpg',
+            '/logos/monetique2.jpg',
+            '/logos/digi.jpg',
+            '/logos/communication2.png',
+            '/logos/formation2.jpg',
+            '/logos/identité1.png'
+          ];
+          
+          secondaryImages.forEach(url => {
+            const img = new Image();
+            img.src = url;
+          });
+        }, 100);
+      }, { once: true });
     </script>
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -54,6 +87,7 @@
     
     <!-- CSS critique pour éviter le flash de contenu non stylisé et accélérer les animations -->
     <style>
+      /* CSS critique pour des performances optimales dès le premier rendu */
       .hero-background {
         will-change: transform;
         transform: translateZ(0);
@@ -62,12 +96,32 @@
       }
       .hero-animation {
         will-change: opacity, transform;
+        transform: translateZ(0);
       }
-      .hero-image {
+      img[src^="/logos/"] {
         content-visibility: auto;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: opacity;
+      }
+      /* Styles spécifiques pour les images Hero */
+      img[src="/logos/barriere.jpg"],
+      img[src="/logos/systemereseauxHeaderNew.jpg"],
+      img[src="/logos/terminaux1.png"],
+      img[src="/logos/digitalisation1.png"],
+      img[src="/logos/monetique1.png"],
+      img[src="/logos/formation1.png"],
+      img[src="/logos/formation3.png"],
+      img[src="/logos/commu.png"],
+      img[src="/logos/quatrecartes.jpg"],
+      img[src="/logos/Carte1.jpg"] {
+        content-visibility: auto;
+        will-change: opacity, transform;
+        transform: translateZ(0);
       }
       .content-container {
         contain: layout style paint;
+        transform: translateZ(0);
       }
     </style>
   </head>

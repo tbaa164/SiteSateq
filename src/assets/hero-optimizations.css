@@ -1,6 +1,6 @@
-/* Optimisations pour éliminer la latence dans le rendu des Hero sections */
+/* Optimisations agressives pour éliminer la latence dans le rendu des Hero sections */
 
-/* Précharger les arrière-plans */
+/* Précharger les arrière-plans avec accélération matérielle maximale */
 .hero-background {
   will-change: transform;
   transform: translateZ(0);
@@ -8,18 +8,54 @@
   perspective: 1000px;
 }
 
-/* Optimisation des animations */
+/* Optimisation des animations avec accélération GPU */
 .hero-animation {
   will-change: opacity, transform;
   transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateZ(0);
 }
 
-/* Optimisation pour les images */
-.hero-image {
+/* Optimisation avancée pour les images */
+img[src^="/logos/"] {
   content-visibility: auto;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
-/* Style pour le conteneur principal des Hero sections */
+/* Styles spécifiques pour les images Hero souvent problématiques */
+img[src="/logos/barriere.jpg"],
+img[src="/logos/systemereseauxHeaderNew.jpg"],
+img[src="/logos/terminaux1.png"],
+img[src="/logos/digitalisation1.png"],
+img[src="/logos/monetique1.png"],
+img[src="/logos/formation1.png"],
+img[src="/logos/formation3.png"],
+img[src="/logos/commu.png"],
+img[src="/logos/quatrecartes.jpg"],
+img[src="/logos/Carte1.jpg"],
+img[src="/logos/identité1.png"] {
+  contain: paint;
+  content-visibility: auto;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Style pour le conteneur principal des Hero sections avec accélération GPU */
 .content-container {
   contain: layout style paint;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Optimisation pour les navigateurs WebKit (Safari) */
+@supports (-webkit-overflow-scrolling: touch) {
+  img[src^="/logos/"] {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 }

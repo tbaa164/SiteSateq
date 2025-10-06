@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import RouteScrollRestorer from "./components/RouteScrollRestorer";
 import RoutePreloader from "./components/RoutePreloader";
 import ImagePreloader from "./components/ImagePreloader";
+import HeroImagesRenderer from "./components/HeroImagesRenderer";
 import Index from "./pages/Index";
 
 import References from "./pages/References";
@@ -38,6 +39,7 @@ const App = () => (
   <RouteScrollRestorer />
   <RoutePreloader />
   <ImagePreloader />
+  <HeroImagesRenderer />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* Route supprimée : mot-directeur */}
