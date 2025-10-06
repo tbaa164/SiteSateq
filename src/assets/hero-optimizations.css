@@ -23,16 +23,6 @@ img[src^="/logos/"] {
   backface-visibility: hidden;
 }
 
-/* Optimisations spécifiques pour les logos des partenaires */
-.partner-logo {
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  transition: opacity 0.2s ease-in-out;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
 /* Styles spécifiques pour les images Hero souvent problématiques */
 img[src="/logos/barriere.jpg"],
 img[src="/logos/systemereseauxHeaderNew.jpg"],
