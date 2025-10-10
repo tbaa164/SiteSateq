@@ -15,10 +15,10 @@ export default function Hero() {
               alt="Technologies Digitales" 
               className="w-full h-full object-cover"
             />
-            {/* Overlay très léger pour mobile et web */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-transparent to-black/15 mix-blend-multiply"></div>
+            {/* Overlay optimisé pour meilleure lisibilité sur mobile */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/25 sm:from-primary/15 via-black/10 sm:via-transparent to-black/25 sm:to-black/15 mix-blend-multiply"></div>
           
-            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/40 sm:from-black/30 to-transparent"></div>
           </div>
           
           {/* Fond extrêmement léger pour contraste */}
@@ -63,15 +63,15 @@ export default function Hero() {
           {/* Background sombre supprimé pour afficher l'image de fond */}
           
           {/* Titre avec style spécifique pour mobile - Ombres modérées pour meilleure luminosité */}
-          <h1 className="text-2xl md:text-4xl font-bold mb-0.5 sm:mb-4 drop-shadow-lg sm:drop-shadow-lg mt-0 sm:mt-0 pt-0 sm:pt-0 relative z-10 text-shadow-mobile sm:text-shadow-none">
+          <h1 className="text-[22px] md:text-4xl font-bold mb-1 sm:mb-4 drop-shadow-lg sm:drop-shadow-lg mt-0 sm:mt-0 pt-0 sm:pt-0 relative z-10 text-shadow-mobile sm:text-shadow-none leading-tight">
             <span className="inline-block font-extrabold text-white">LES</span> <span className="font-extrabold text-white">TECHNOLOGIES DIGITALES</span>
           </h1>
-          <h2 className="text-xl md:text-4xl font-bold mb-1 sm:mb-6 drop-shadow-lg sm:drop-shadow-lg relative z-10 text-shadow-mobile sm:text-shadow-none">
+          <h2 className="text-[22px] md:text-4xl font-bold mb-2 sm:mb-6 drop-shadow-lg sm:drop-shadow-lg relative z-10 text-shadow-mobile sm:text-shadow-none leading-tight">
             <span className="text-white">AU SERVICE DE L'ÉCONOMIE NUMÉRIQUE EN AFRIQUE</span>
           </h2>
           <div className="space-y-0.5 sm:space-y-3 text-sm sm:text-2xl drop-shadow-lg sm:drop-shadow-none relative z-10 mb-1 sm:mb-0">
-            <p className="text-white bg-black/20 sm:bg-transparent px-3 py-1 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none"><span className="font-bold sm:font-semibold">RÉSEAUX, IDENTITÉ & PAIEMENT ÉLECTRONIQUE</span></p>
-            <p className="text-white bg-black/20 sm:bg-transparent px-3 py-1 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none"><span className="font-bold sm:font-semibold">COMMUNICATION D'ENTREPRISE</span></p>
+            <p className="text-white bg-black/30 sm:bg-transparent px-3 py-1 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none text-shadow-mobile sm:text-shadow-none"><span className="font-bold sm:font-semibold">RÉSEAUX, IDENTITÉ & PAIEMENT ÉLECTRONIQUE</span></p>
+            <p className="text-white bg-black/30 sm:bg-transparent px-3 py-1 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none text-shadow-mobile sm:text-shadow-none"><span className="font-bold sm:font-semibold">COMMUNICATION D'ENTREPRISE</span></p>
           </div>
         </div>
       </section>
