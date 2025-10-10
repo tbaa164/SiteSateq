@@ -50,12 +50,57 @@
     border-radius: 9999px;
   }
   
+  .text-stroke-black {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0px 2px 4px rgba(0,0,0,0.8);
+  }
+  
+  /* Effet de texte stroke plus léger pour le mobile */
+  @media (max-width: 640px) {
+    .text-stroke-black {
+      text-shadow:
+        -0.8px -0.8px 0 #000,
+        0.8px -0.8px 0 #000,
+        -0.8px 0.8px 0 #000,
+        0.8px 0.8px 0 #000,
+        0px 1px 2px rgba(0,0,0,0.6);
+    }
+  }
+  
+  /* Style pour désactiver le text-stroke en mode web */
+  .text-stroke-none {
+    text-shadow: none;
+  }
+  
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 1), 
+                 0 2px 4px rgba(0, 0, 0, 0.9),
+                 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Moderate text shadow for mobile readability without being too dark */
+  .text-shadow-mobile {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7), 
+                 0 1px 2px rgba(0, 0, 0, 0.6),
+                 0 2px 3px rgba(0, 0, 0, 0.5),
+                 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
   .scrollbar-thumb-orange-200::-webkit-scrollbar-thumb {
     background-color: theme('colors.orange.200');
   }
   
   .scrollbar-track-transparent::-webkit-scrollbar-track {
     background-color: transparent;
+  }
+  
+  /* Effet de vignette pour améliorer la lisibilité sur mobile */
+  .bg-radial-gradient {
+    background: radial-gradient(circle, transparent 25%, rgba(0, 0, 0, 0.4) 100%);
   }
 }
 

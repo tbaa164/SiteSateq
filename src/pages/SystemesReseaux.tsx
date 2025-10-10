@@ -26,10 +26,10 @@ const SystemesReseaux = () => {
       <Header />
       
       <main className="container mx-auto px-4 md:px-6 py-8">
-        {/* Hero Section - With Background Image */}
-        <div className="relative overflow-hidden rounded-2xl mb-12 py-16 px-4 bg-cover bg-center h-[220px] flex items-center justify-center" style={{ backgroundImage: 'url(/logos/systemereseauxHeaderNew.jpg)' }}>
-          {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-black/30"></div>
+        {/* Hero Section - With Background Image - Hauteur augmentée pour mobile */}
+        <div className="relative overflow-hidden rounded-2xl mb-12 py-16 px-4 bg-cover bg-center h-[300px] sm:h-[220px] flex items-center justify-center" style={{ backgroundImage: 'url(/logos/systemereseauxHeaderNew.jpg)' }}>
+          {/* Overlay to ensure text readability - plus foncé sur mobile */}
+          <div className="absolute inset-0 bg-black/50 sm:bg-black/30"></div>
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             {/* Large Circle */}
@@ -103,23 +103,23 @@ const SystemesReseaux = () => {
             />
           </div>
           
-          {/* Hero Content - Improved for background image */}
+          {/* Hero Content - Improved for background image and mobile display */}
           <motion.div 
-            className="relative text-center z-10"
+            className="relative text-center z-10 max-w-full px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h1 
-              className="text-3xl md:text-5xl font-bold mb-3 text-white"
+              className="text-2xl md:text-5xl font-bold mb-2 md:mb-3 text-white"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="text-green-400">Systèmes & Réseaux</span> <span className="text-white">de sécurité</span>
+              <span className="text-green-400 break-words sm:whitespace-nowrap">Systèmes & Réseaux</span> <span className="text-white break-words sm:whitespace-nowrap">de sécurité</span>
             </motion.h1>
             <motion.p 
-              className="text-base md:text-lg text-white mx-auto whitespace-nowrap"
+              className="text-sm md:text-lg text-white mx-auto px-2 whitespace-normal sm:whitespace-nowrap"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}

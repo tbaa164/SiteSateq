@@ -141,32 +141,62 @@ const Actualites = () => {
             
             {/* Contenu principal du hero */}
             <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center md:items-start relative z-10">
-              <div className="max-w-xl text-center md:text-left">
-                <div className="mb-1.5">
+              <div className="max-w-xl w-full text-center md:text-left">
+                <div className="mb-2 sm:mb-1.5">
                   <span className="inline-block px-2.5 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold text-xs uppercase tracking-wide">
                     ACTUALITÉS
                   </span>
                 </div>
                 
                 <div className="flex flex-col space-y-2 mb-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                  {/* Version standard pour tous */}
+                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2025)</span> 
                     1- SATEQ devient le distributeur AUSTRIACARD
                   </div>
                   
-                  <div className="bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2025)</span>
                     2- SATEQ signe avec <span className="text-orange-400 font-bold">INTOUCH/BESTICard</span>
                   </div>
                   
-                  <div className="bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2024)</span>
                     3- SATEQ devient distributeur de <span className="text-orange-400 font-bold">TPE Verifone</span>
                   </div>
                   
-                  <div className="bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2024)</span>
                     4- SATEQ et <span className="text-orange-400 font-bold">S2M</span> deviennent partenaire en Afrique
+                  </div>
+                  
+                  {/* Version optimisée pour mobile uniquement */}
+                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                    <div className="flex items-center">
+                      <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2025)</span>
+                      <span className="flex-grow">1- SATEQ devient le distributeur AUSTRIACARD</span>
+                    </div>
+                  </div>
+                  
+                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                    <div className="flex items-center">
+                      <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2025)</span>
+                      <span className="flex-grow">2- SATEQ signe avec <span className="text-orange-400 font-bold">INTOUCH</span></span>
+                    </div>
+                  </div>
+                  
+                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                    <div className="flex items-center">
+                      <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2024)</span>
+                      <span className="flex-grow">3- SATEQ devient distributeur de <span className="text-orange-400 font-bold">TPE</span></span>
+                    </div>
+                  </div>
+                  
+                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                    <div className="flex items-center">
+                      <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2024)</span>
+                      <span className="flex-grow">4- SATEQ et <span className="text-orange-400 font-bold">S2M</span> deviennent partenaire</span>
+                    </div>
                   </div>
                 </div>
               </div>

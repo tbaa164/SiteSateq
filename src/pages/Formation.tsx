@@ -33,16 +33,16 @@ const Formation = () => {
                 alt="Centre de formation" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-black/60 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 sm:from-primary/80 via-primary/70 sm:via-primary/60 to-black/70 sm:to-black/60 mix-blend-multiply"></div>
             </motion.div>
           </div>
           
           {/* Overlay avec dégradé pour meilleure lisibilité */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 sm:from-black/40 to-transparent"></div>
           
           {/* Contenu Hero */}
-          <div className="relative min-h-[50vh] flex items-center">
-            <div className="container mx-auto px-6 py-12">
+          <div className="relative min-h-[60vh] sm:min-h-[50vh] flex items-center">
+            <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
               <div className="max-w-2xl">
                 <motion.div
                   className="space-y-3"
@@ -50,6 +50,19 @@ const Formation = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-shadow-sm">
+                    Centre de Formation
+                  </h1>
+                  <div className="mt-3 md:mt-4 space-y-1.5 md:space-y-2">
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2"></div>
+                      <p className="text-lg md:text-xl lg:text-2xl font-semibold text-green-300 text-shadow-sm">SATEQ Digital Academy</p>
+                    </div>
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2"></div>
+                      <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white text-shadow-sm">Séminaires & Consulting</p>
+                    </div>
+                  </div>
                 </motion.div>
               </div>
             </div>

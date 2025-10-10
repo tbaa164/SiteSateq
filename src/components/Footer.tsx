@@ -135,7 +135,7 @@ export default function Footer() {
             </div>
 
             {/* Newsletter & Contact */}
-            <div className="space-y-8">
+            <div id="contactez-nous" className="space-y-8">
               <h4 className="text-xl font-bold text-white mb-8 relative">
                 Contactez-nous
                 <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-primary rounded-full"></div>

@@ -31,26 +31,41 @@ const Monetique = () => {
               <img 
                 src="/logos/monetique1.png" 
                 alt="Solutions Monétiques" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover brightness-90 sm:brightness-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-black/70 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 sm:from-primary/80 via-primary/75 sm:via-primary/60 to-black/80 sm:to-black/70 mix-blend-multiply"></div>
             </motion.div>
           </div>
           
           {/* Overlay avec dégradé pour meilleure lisibilité */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 sm:from-black/40 via-black/40 sm:via-black/30 to-black/20 sm:to-transparent"></div>
           
-          {/* Contenu Hero - uniquement le titre */}
-          <div className="relative min-h-[40vh] flex items-center">
-            <div className="container mx-auto px-6 py-6">
+          {/* Effet de vignette pour mobile uniquement */}
+          <div className="absolute inset-0 sm:hidden bg-radial-gradient"></div>
+          
+          {/* Contenu Hero avec titre et sous-titres */}
+          <div className="relative min-h-[50vh] sm:min-h-[40vh] flex items-center">
+            <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-6">
               <div className="max-w-2xl">
                 <motion.div
-                  className="space-y-1"
+                  className="space-y-3"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                 
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-shadow-sm">
+                    Monétique
+                  </h1>
+                  <div className="mt-3 md:mt-4 space-y-1.5 md:space-y-2">
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2"></div>
+                      <p className="text-lg md:text-xl lg:text-2xl font-semibold text-green-300 text-shadow-sm">Paiement de services</p>
+                    </div>
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2"></div>
+                      <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white text-shadow-sm">Cartes bancaires & Terminaux</p>
+                    </div>
+                  </div>
                 </motion.div>
               </div>
             </div>

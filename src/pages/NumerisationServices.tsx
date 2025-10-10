@@ -40,22 +40,25 @@ const NumerisationServices = () => {
               <img 
                 src="/logos/digitalisation1.png" 
                 alt="Numérisation de services" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover brightness-90 sm:brightness-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 sm:from-primary/90 via-primary/85 sm:via-primary/70 to-black/60 sm:to-transparent mix-blend-multiply"></div>
             </div>
           </motion.div>
         </div>
         
-        {/* Overlay avec dégradé */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-transparent"></div>
+        {/* Overlay avec dégradé - plus sombre sur mobile */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 sm:from-black/40 via-black/50 sm:via-black/30 to-black/30 sm:to-transparent"></div>
         
-        {/* Contenu Hero - Hauteur réduite */}
-        <div className="relative h-[50vh] min-h-[300px] flex items-center">
-          <div className="container mx-auto px-6">
+        {/* Effet de vignette pour mobile uniquement */}
+        <div className="absolute inset-0 sm:hidden bg-radial-gradient"></div>
+        
+        {/* Contenu Hero - Hauteur adaptée pour mobile/desktop */}
+        <div className="relative h-[60vh] sm:h-[50vh] min-h-[350px] sm:min-h-[300px] flex items-center">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-3xl">
               <motion.h1 
-                className="text-4xl lg:text-5xl font-bold text-white mb-4"
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 text-shadow-sm"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -64,7 +67,7 @@ const NumerisationServices = () => {
               </motion.h1>
               
               <motion.p 
-                className="text-lg text-white/90 mb-6"
+                className="text-base sm:text-lg text-white mb-5 sm:mb-6 max-w-md text-shadow-mobile"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}

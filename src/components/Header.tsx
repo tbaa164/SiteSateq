@@ -13,12 +13,39 @@ const Header = () => {
   // Function to handle smooth scroll to contact section
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Fermer d'abord le menu si sur mobile
     setOpenDropdown(null);
     setIsMenuOpen(false);
+
+    // Utiliser setTimeout pour s'assurer que le menu est fermé avant de défiler
+    // Ce délai est important sur mobile pour que le scroll fonctionne correctement
+    setTimeout(() => {
+      // Essayer d'abord de trouver la section "contactez-nous"
+      const contactezNousSection = document.getElementById('contactez-nous');
+      
+      // S'il existe, défiler jusqu'à lui
+      if (contactezNousSection) {
+        contactezNousSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      
+      // Sinon, utiliser l'ID du footer
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Solution spécifique pour mobile - ajouter un deuxième scroll après un court délai
+        // Cela assure que sur les petits écrans, nous défilons vraiment jusqu'au bas
+        if (isMobileDevice()) {
+          setTimeout(() => {
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: 'smooth'
+            });
+          }, 150);
+        }
+      }
+    }, 300);
   };
   
   // Effect to handle clicks outside dropdown
@@ -44,6 +71,11 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openDropdown]);
+  
+  // Fonction utilitaire pour vérifier si l'appareil est mobile
+  const isMobileDevice = () => {
+    return window.innerWidth < 768; // Considère les appareils de moins de 768px comme mobiles
+  };
   
   const navItems = [
     { name: "Actualités", href: "/actualites" },
@@ -102,7 +134,7 @@ const Header = () => {
               <div key={item.name} className="relative group">
                 {item.name === "Contact" ? (
                   <a 
-                    href="#contact"
+                    href="#contactez-nous"
                     className="px-5 py-2 text-gray-700 font-medium hover:text-primary transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300"
                     onClick={handleContactClick}
                   >
@@ -179,7 +211,7 @@ const Header = () => {
                 item.name === "Contact" ? (
                   <a 
                     key={item.name}
-                    href="#contact" 
+                    href="#contactez-nous" 
                     className="py-3 px-4 text-gray-700 hover:text-primary transition-all duration-200 flex items-center justify-between"
                     onClick={handleContactClick}
                   >
