@@ -1,14 +1,39 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpandedMenus, setMobileExpandedMenus] = useState<string[]>([]);
+  // Récupérer les sous-menus ouverts depuis le localStorage lors de l'initialisation
+  const [mobileExpandedMenus, setMobileExpandedMenus] = useState<string[]>(() => {
+    try {
+      const savedMenus = localStorage.getItem("mobileExpandedMenus");
+      return savedMenus ? JSON.parse(savedMenus) : [];
+    } catch (error) {
+      console.error("Error loading saved menus:", error);
+      return [];
+    }
+  });
   const { language, setLanguage, t } = useLanguage();
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  
+  // Fonction pour vérifier si un lien est actif
+  const isLinkActive = (href: string) => {
+    // Si l'href commence par #, c'est un lien d'ancrage, pas une page
+    if (href.startsWith('#')) return false;
+    
+    // Pour les liens de page normaux, on compare avec le pathname actuel
+    return location.pathname === href || location.pathname.startsWith(href + '/');
+  };
+  
+  // Fonction pour vérifier si un élément de menu avec dropdown a un sous-menu actif
+  const hasActiveChild = (item: any) => {
+    if (!item.dropdown) return false;
+    return item.dropdown.some((child: any) => isLinkActive(child.href));
+  };
   
   // Function to handle smooth scroll to contact section
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -71,6 +96,42 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [openDropdown]);
+  
+  // Effet pour sauvegarder l'état des menus mobiles ouverts dans localStorage
+  useEffect(() => {
+    // Sauvegarder uniquement si le tableau n'est pas vide
+    try {
+      localStorage.setItem("mobileExpandedMenus", JSON.stringify(mobileExpandedMenus));
+    } catch (error) {
+      console.error("Error saving expanded menus:", error);
+    }
+  }, [mobileExpandedMenus]);
+  
+  // Effet pour s'assurer que les sous-menus contenant la page active sont ouverts
+  useEffect(() => {
+    // Parcourir tous les éléments de navigation avec des sous-menus
+    const itemsWithActiveChildren = navItems
+      .filter(item => item.dropdown)
+      .filter(item => hasActiveChild(item))
+      .map(item => item.name);
+      
+    // Ajouter ces éléments à mobileExpandedMenus s'ils n'y sont pas déjà
+    if (itemsWithActiveChildren.length > 0) {
+      const newExpandedMenus = [...mobileExpandedMenus];
+      let hasChanges = false;
+      
+      itemsWithActiveChildren.forEach(name => {
+        if (!newExpandedMenus.includes(name)) {
+          newExpandedMenus.push(name);
+          hasChanges = true;
+        }
+      });
+      
+      if (hasChanges) {
+        setMobileExpandedMenus(newExpandedMenus);
+      }
+    }
+  }, [location.pathname]); // Se déclenche à chaque changement d'URL
   
   // Fonction utilitaire pour vérifier si l'appareil est mobile
   const isMobileDevice = () => {
@@ -143,7 +204,11 @@ const Header = () => {
                 ) : item.dropdown ? (
                   <div className="relative" ref={(el) => dropdownRefs.current[item.name] = el}>
                     <button 
-                      className={`px-4 xl:px-6 py-2 text-gray-700 hover:text-primary transition-all duration-200 font-medium flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 ${openDropdown === item.name ? 'text-primary after:w-full' : ''}`}
+                      className={`px-4 xl:px-6 py-2 transition-all duration-200 font-medium flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 ${
+                        openDropdown === item.name ? 'text-primary after:w-full' : 
+                        hasActiveChild(item) ? 'text-primary after:w-full' : 
+                        'text-gray-700 hover:text-primary'
+                      }`}
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                     >
                       {item.name}
@@ -162,7 +227,9 @@ const Header = () => {
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="block px-5 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-all duration-200 border-b border-gray-50 last:border-b-0"
+                            className={`block px-5 py-3 hover:bg-gray-50 transition-all duration-200 border-b border-gray-50 last:border-b-0 ${
+                              isLinkActive(dropdownItem.href) ? 'text-primary bg-gray-50 font-medium' : 'text-gray-700 hover:text-primary'
+                            }`}
                             onClick={() => setOpenDropdown(null)}
                           >
                             {dropdownItem.name}
@@ -172,7 +239,14 @@ const Header = () => {
                     )}
                   </div>
                 ) : (
-                  <Link to={item.href} className="px-4 xl:px-6 py-2 text-gray-700 font-medium hover:text-primary transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300">
+                  <Link 
+                    to={item.href} 
+                    className={`px-4 xl:px-6 py-2 font-medium transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
+                      isLinkActive(item.href) 
+                        ? 'text-primary after:w-full after:bg-primary' 
+                        : 'text-gray-700 hover:text-primary after:w-0 hover:after:w-full after:bg-primary'
+                    }`}
+                  >
                     {item.name}
                   </Link>
                 )}
@@ -185,9 +259,7 @@ const Header = () => {
             <button 
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
-                if (!isMenuOpen) {
-                  setMobileExpandedMenus([]);
-                }
+                // Ne plus réinitialiser mobileExpandedMenus pour conserver l'état des sous-menus
               }} 
               className="lg:hidden flex items-center justify-center w-10 h-10 rounded-md hover:bg-gray-100 transition-all duration-200 text-gray-700 hover:text-primary focus:outline-none"
               aria-label="Menu"
@@ -220,7 +292,7 @@ const Header = () => {
                 ) : item.dropdown ? (
                   <div key={item.name} className="py-3 px-4">
                     <div 
-                      className="flex items-center justify-between text-gray-700 font-medium cursor-pointer"
+                      className={`flex items-center justify-between font-medium cursor-pointer ${hasActiveChild(item) ? 'text-primary' : 'text-gray-700'}`}
                       onClick={() => {
                         if (mobileExpandedMenus.includes(item.name)) {
                           setMobileExpandedMenus(mobileExpandedMenus.filter(name => name !== item.name));
@@ -245,7 +317,9 @@ const Header = () => {
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="block py-2 px-3 text-gray-600 hover:text-primary transition-all duration-200 text-sm"
+                            className={`block py-2 px-3 transition-all duration-200 text-sm ${
+                              isLinkActive(dropdownItem.href) ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'
+                            }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -258,7 +332,9 @@ const Header = () => {
                   <Link 
                     key={item.name} 
                     to={item.href} 
-                    className="py-3 px-4 text-gray-700 hover:text-primary transition-all duration-200 flex items-center justify-between"
+                    className={`py-3 px-4 transition-all duration-200 flex items-center justify-between ${
+                      isLinkActive(item.href) ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary'
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
