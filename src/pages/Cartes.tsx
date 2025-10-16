@@ -17,10 +17,10 @@ const Cartes = () => {
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff33_1px,transparent_1px)]" style={{ backgroundSize: '20px 20px' }}></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 sm:from-black/40 to-transparent"></div>
         
-        {/* Éléments décoratifs animés */}
-        <div className="absolute left-1/4 top-1/3 w-10 sm:w-12 h-10 sm:h-12 bg-orange-400 rounded-full blur-md animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute right-1/4 bottom-1/3 w-16 sm:w-20 h-16 sm:h-20 bg-emerald-500 rounded-full blur-md animate-pulse" style={{ animationDelay: '1.2s' }}></div>
-        <div className="absolute right-[20%] top-1/4 w-12 sm:w-16 h-12 sm:h-16 bg-white/60 rounded-full blur-lg animate-float" style={{ animationDelay: '0.8s' }}></div>
+        {/* Éléments décoratifs animés - cachés en mobile, visibles en sm et plus */}
+        <div className="absolute left-1/4 top-1/3 hidden sm:block w-10 sm:w-12 h-10 sm:h-12 bg-orange-400 rounded-full blur-md animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute right-1/4 bottom-1/3 hidden sm:block w-16 sm:w-20 h-16 sm:h-20 bg-emerald-500 rounded-full blur-md animate-pulse" style={{ animationDelay: '1.2s' }}></div>
+        <div className="absolute right-[20%] top-1/4 hidden sm:block w-12 sm:w-16 h-12 sm:h-16 bg-white/60 rounded-full blur-lg animate-float" style={{ animationDelay: '0.8s' }}></div>
         
         {/* Éléments en orbite */}
         <div className="absolute left-[20%] top-[40%] hidden lg:block">
