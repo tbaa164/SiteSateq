@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="relative">
       <div className="min-h-screen bg-background">
         {/* Hero Section - Hauteur réduite sur mobile pour éliminer l'espace vide */}
-        <section className="relative h-60 sm:h-64 lg:h-79 overflow-hidden">
+        <section className="relative h-64 sm:h-64 lg:h-79 overflow-hidden">
           {/* Image d'arrière-plan */}
           <div className="absolute inset-0">
             <img 
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Texte au premier plan - Optimisé pour afficher l'image de fond sur mobile */}
-        <div className="relative container mx-auto px-6 h-full flex flex-col justify-start items-start pt-0 pb-0 sm:justify-center sm:pt-0 text-white">
+        <div className="relative container mx-auto px-6 h-full flex flex-col justify-center items-start pt-0 pb-0 sm:justify-center sm:pt-0 text-white">
           {/* Suppression du conteneur arrière-plan noir pour mobile */}
           
           {/* Cercles décoratifs près du texte - visibilité réduite de 80% sur mobile */}
@@ -66,12 +66,12 @@ export default function Hero() {
           <h1 className="text-[22px] md:text-4xl font-bold mb-1 sm:mb-4 drop-shadow-lg sm:drop-shadow-lg mt-0 sm:mt-0 pt-0 sm:pt-0 relative z-10 text-shadow-mobile sm:text-shadow-none leading-tight">
             <span className="inline-block font-extrabold text-white">LES</span> <span className="font-extrabold text-white">TECHNOLOGIES DIGITALES</span>
           </h1>
-          <h2 className="text-[22px] md:text-4xl font-bold mb-2 sm:mb-6 drop-shadow-lg sm:drop-shadow-lg relative z-10 text-shadow-mobile sm:text-shadow-none leading-tight">
+          <h2 className="text-[22px] md:text-4xl font-bold mb-1 sm:mb-6 drop-shadow-lg sm:drop-shadow-lg relative z-10 text-shadow-mobile sm:text-shadow-none leading-tight">
             <span className="text-white">AU SERVICE DE L'ÉCONOMIE NUMÉRIQUE EN AFRIQUE</span>
           </h2>
-          <div className="space-y-0.5 sm:space-y-3 text-sm sm:text-2xl drop-shadow-lg sm:drop-shadow-none relative z-10 mb-1 sm:mb-0">
-            <p className="text-white bg-black/30 sm:bg-transparent px-3 py-1 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none text-shadow-mobile sm:text-shadow-none"><span className="font-bold sm:font-semibold">RÉSEAUX, IDENTITÉ & PAIEMENT ÉLECTRONIQUE</span></p>
-            <p className="text-white bg-black/30 sm:bg-transparent px-3 py-1 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none text-shadow-mobile sm:text-shadow-none"><span className="font-bold sm:font-semibold">COMMUNICATION D'ENTREPRISE</span></p>
+          <div className="space-y-2 sm:space-y-3 text-sm sm:text-2xl drop-shadow-lg sm:drop-shadow-none relative z-10 mb-1 sm:mb-0 mt-1 sm:mt-0">
+            <p className="text-white bg-black/30 sm:bg-transparent px-3 py-0.5 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none text-shadow-mobile sm:text-shadow-none"><span className="font-bold sm:font-semibold">RÉSEAUX, IDENTITÉ & PAIEMENT ÉLECTRONIQUE</span></p>
+            <p className="text-white bg-black/30 sm:bg-transparent px-3 py-0.5 sm:py-1 sm:p-0 rounded-md backdrop-blur-sm sm:backdrop-blur-none block shadow-lg sm:shadow-none text-shadow-mobile sm:text-shadow-none mt-1 sm:mt-0"><span className="font-bold sm:font-semibold">COMMUNICATION D'ENTREPRISE</span></p>
           </div>
         </div>
       </section>
