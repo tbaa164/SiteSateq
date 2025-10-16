@@ -192,7 +192,7 @@ const Formation = () => {
               </h2>
             </motion.div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[
                 // Expertise
                 {
@@ -240,14 +240,14 @@ const Formation = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center p-4 bg-card rounded-xl border border-primary/10 hover:shadow-md transition-all"
+                  className="flex items-center p-3 md:p-4 bg-card rounded-xl border border-primary/10 hover:shadow-md transition-all overflow-hidden"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 shadow-sm">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center mr-2 md:mr-3 shadow-sm">
                     {item.icon}
                   </div>
-                  <div>
-                    <h3 className="font-bold text-foreground">{item.title}</h3>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-bold text-foreground whitespace-nowrap overflow-hidden text-ellipsis">{item.title}</h3>
                     <p className="text-xs text-muted-foreground">{item.description}</p>
                   </div>
                 </motion.div>
