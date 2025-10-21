@@ -20,35 +20,40 @@ const partners = [{
   color: "#009688", // Bleu-vert
   description: "Solutions identité & cartes"
 }, {
-  name: "Schneider",
-  logo: "schneider.jpg",
-  color: "#FF9800", // Orange
-  description: "Solutions énergétiques"
-}, {
   name: "CryptoAg",
   logo: "CryptoAg.jpg",
   color: "#FFC107", // Jaune
   description: "Solution de cryptage"
 }, {
-  name: "SeeTeec",
-  logo: "SeeTeec.jpg",
+  name: "Austriacard",
+  logo: "austriacard.png",
   color: "#E91E63", // Rose
-  description: "Sécurité électronique"
+  description: "...."
 }, {
-  name: "Sewacard",
-  logo: "sewacardindustrie.jpg",
-  color: "#795548", // Marron
-  description: "Solution cartes"
-}, {
-  name: "Technopoint",
-  logo: "technopoint.jpg",
+  name: "S2M",
+  logo: "s2mlogo.png",
   color: "#607D8B", // Bleu-gris
-  description: "Impression numérique"
+  description: "...."
 }, {
-  name: "T-Nexa",
-  logo: "TNexa.jpg",
+  name: "M2M",
+  logo: "m2mlogo.png",
   color: "#3F51B5", // Indigo
-  description: "Solutions de communication"
+  description: "...."
+}, {
+  name: "Feitian",
+  logo: "feitian.png",
+  color: "#FF5722", // Deep Orange
+  description: "...."
+}, {
+  name: "Toppan",
+  logo: "toppan.jpeg",
+  color: "#9C27B0", // Purple
+  description: "...."
+}, {
+  name: "InTouch",
+  logo: "intouchlogo.png",
+  color: "#00BCD4", // Cyan
+  description: "...."
 }];
 
 export default function Partners() {
@@ -98,7 +103,7 @@ export default function Partners() {
           <div className="flex items-center gap-2 mb-2">
             <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
             <h2 className="text-2xl md:text-3xl font-bold">
-              Nos Partenaires <span className="text-primary">Stratégiques</span>
+              Nos Partenaires 
             </h2>
             <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
           </div>

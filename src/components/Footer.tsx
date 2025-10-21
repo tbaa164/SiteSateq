@@ -173,14 +173,14 @@ export default function Footer() {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                   </div>
-                  <p className="text-gray-300 text-sm">(+221) 33 867 57 57</p>
+                  <p className="text-gray-300 text-sm">( +221 ) 33 822 53 10</p>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Smartphone className="w-4 h-4 text-primary flex-shrink-0" />
                   </div>
-                  <p className="text-gray-300 text-sm">(+221) 77 649 77 89</p>
+                  <p className="text-gray-300 text-sm">( +221 ) 77 290 59 85</p>
                 </div>
                 
                 <div className="flex items-center space-x-3">
