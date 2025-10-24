@@ -173,6 +173,7 @@ const Header = () => {
         { name: "Publicité", href: "/communication" }
       ]
     },
+      { name: "Vidéos", href: "/videos" },
     { name: "Contact", href: "#contact" }
   ];
 
@@ -190,13 +191,13 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          <nav className="hidden lg:flex items-center space-x-10 h-full lg:ml-8">
             {navItems.map((item, index) => (
               <div key={item.name} className="relative group">
                 {item.name === "Contact" ? (
                   <a 
                     href="#contactez-nous"
-                    className="px-5 py-2 text-gray-700 font-medium hover:text-primary transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300"
+                    className="px-5 py-2 text-gray-700 font-medium hover:text-primary transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 h-full flex items-center"
                     onClick={handleContactClick}
                   >
                     {item.name}
@@ -204,7 +205,7 @@ const Header = () => {
                 ) : item.dropdown ? (
                   <div className="relative" ref={(el) => dropdownRefs.current[item.name] = el}>
                     <button 
-                      className={`px-4 xl:px-6 py-2 transition-all duration-200 font-medium flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 ${
+                      className={`px-4 xl:px-6 py-2 transition-all duration-200 font-medium flex items-center gap-1.5 h-full relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 ${
                         openDropdown === item.name ? 'text-primary after:w-full' : 
                         hasActiveChild(item) ? 'text-primary after:w-full' : 
                         'text-gray-700 hover:text-primary'
@@ -238,10 +239,10 @@ const Header = () => {
                       </div>
                     )}
                   </div>
-                ) : (
+                  ) : (
                   <Link 
                     to={item.href} 
-                    className={`px-4 xl:px-6 py-2 font-medium transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
+                    className={`px-4 xl:px-6 py-2 font-medium transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 h-full flex items-center ${
                       isLinkActive(item.href) 
                         ? 'text-primary after:w-full after:bg-primary' 
                         : 'text-gray-700 hover:text-primary after:w-0 hover:after:w-full after:bg-primary'

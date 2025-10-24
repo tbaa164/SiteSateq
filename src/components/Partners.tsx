@@ -107,7 +107,7 @@ export default function Partners() {
             </h2>
             <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
           </div>
-          <p className="text-orange-500 text-sm md:text-base whitespace-nowrap overflow-x-auto no-scrollbar w-full px-2">
+          <p className="text-orange-500 text-sm md:text-base md:whitespace-nowrap md:overflow-x-auto no-scrollbar w-full px-2">
             Nous collaborons avec les leaders mondiaux de la technologie pour offrir les meilleures solutions du marché.
           </p>
         </div>
@@ -138,35 +138,29 @@ export default function Partners() {
             <div className="flex">
               {partners.map((partner, index) => (
                 <div key={index} className="flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%] xl:flex-[0_0_20%] px-2 py-1">
-                  <div className="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-center p-4 h-full transition-all duration-300 hover:shadow-md hover:border-primary/20 hover:scale-105 group cursor-pointer">
+                  <div className="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-center p-2 md:p-4 h-full transition-all duration-300 hover:shadow-md hover:border-primary/20 hover:scale-105 group cursor-pointer">
                     {/* Partner Logo */}
-                    <div className="w-28 h-20 flex items-center justify-center mb-4 overflow-hidden group-hover:transform group-hover:scale-105 transition-transform duration-300">
-                      <img 
-                        src={`/logos/${partner.logo}`} 
-                        alt={partner.name} 
-                        className="max-w-full max-h-full object-contain filter drop-shadow-sm" 
-                        onError={(e) => {
-                          // Fallback en cas d'échec de chargement de l'image
-                          e.currentTarget.style.display = 'none';
-                          // Accéder au div fallback via un ref ou un id serait préférable
-                          const fallbackDiv = e.currentTarget.parentElement?.querySelector('div');
-                          if (fallbackDiv) {
-                            (fallbackDiv as HTMLElement).style.display = 'flex';
-                          }
-                        }}
-                      />
-                      <div 
-                        className="w-full h-full rounded-lg items-center justify-center hidden" 
-                        style={{ backgroundColor: `${partner.color}20` }}
-                      >
-                        <span className="font-bold" style={{ color: partner.color }}>{partner.name.substring(0, 3)}</span>
+                    <div className="w-full h-28 md:h-32 lg:h-28 flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                        <img 
+                          src={`/logos/${partner.logo}`} 
+                          alt={partner.name} 
+                          className="w-full h-full object-contain filter drop-shadow-sm" 
+                          onError={(e) => {
+                            // Fallback en cas d'échec de chargement de l'image
+                            e.currentTarget.style.display = 'none';
+                            const fallbackDiv = e.currentTarget.parentElement?.querySelector('div');
+                            if (fallbackDiv) {
+                              (fallbackDiv as HTMLElement).style.display = 'flex';
+                            }
+                          }}
+                        />
+                        <div 
+                          className="w-full h-full rounded-lg items-center justify-center hidden" 
+                          style={{ backgroundColor: `${partner.color}20` }}
+                        >
+                          <span className="font-bold" style={{ color: partner.color }}>{partner.name.substring(0, 3)}</span>
+                        </div>
                       </div>
-                    </div>
-                    
-                    {/* Description */}
-                    <p className="text-xs text-muted-foreground text-center opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                      {partner.description}
-                    </p>
                   </div>
                 </div>
               ))}

@@ -28,9 +28,9 @@ const CRITICAL_IMAGES = [
   
   // Images de la section Actualités (TPE et Signatures)
   '/logos/verifone1.png',
-  '/logos/signatureaustria.png',
+  '/logos/signatureaustria.jpg',
   '/logos/conventionintouch.png',
-  '/logos/S2m.png',
+  '/logos/S2m.jpg',
   
   // Images des terminaux TPE
   '/logos/TPEF20FP.png',

@@ -56,35 +56,43 @@ const Actualites = () => {
   const newsItems: (NewsItem & { excerpt: string, content?: string, imageAlt?: string }) [] = [
     {
       id: "1",
-      title: "SATEQ DIGITAL devient Distributeur des TPE VERIFONE en Afrique",
-      excerpt: "Un partenariat stratégique pour développer les solutions de paiement électronique sur le continent africain.",
-      date: "5 Mars 2023",
+      title: "SATEQ devient le distributeur AUSTRIACARD",
+      excerpt: "Un nouveau partenariat stratégique pour renforcer notre offre de solutions monétiques.",
+      date: "2025",
       category: "Partenariat",
-      imageAlt: "Partenariat SATEQ DIGITAL avec VERIFONE"
+      imageAlt: "Partenariat SATEQ avec AUSTRIACARD"
     },
     {
       id: "2",
-      title: "AUSTRIACARD SATEQ",
-      excerpt: "",
+      title: "SATEQ signe avec INTOUCH/BestiCard",
+      excerpt: "Un partenariat majeur pour développer les solutions de paiement innovantes.",
       date: "2025",
-      category: "Technologie",
-      imageAlt: "Terminal de paiement électronique"
+      category: "Partenariat",
+      imageAlt: "Signature du partenariat INTOUCH"
     },
     {
       id: "3",
-      title: "Transformation digitale : clés du succès pour les entreprises",
-      excerpt: "Les stratégies essentielles pour réussir sa transformation digitale dans un monde en mutation.",
-      date: "7 Janvier 2023",
-      category: "Digital",
-      imageAlt: "Tableau de bord digital d'entreprise"
+      title: "SATEQ devient distributeur de TPE Verifone",
+      excerpt: "Un partenariat stratégique pour développer les solutions de paiement électronique sur le continent africain.",
+      date: "2024",
+      category: "Partenariat",
+      imageAlt: "Partenariat SATEQ avec VERIFONE"
     },
     {
       id: "4",
-      title: "La transformation digitale passe par une évolution profonde du management",
-      excerpt: "Comment adapter le management aux enjeux de la transformation digitale moderne.",
-      date: "2 Janvier 2023",
-      category: "Management",
-      imageAlt: "Équipe de management digital"
+      title: "SATEQ et S2M deviennent partenaire en Afrique",
+      excerpt: "Une alliance stratégique pour renforcer notre présence sur le marché africain.",
+      date: "2024",
+      category: "Partenariat",
+      imageAlt: "Partenariat SATEQ avec S2M"
+    },
+    {
+      id: "5",
+      title: "SATEQ devient distributeur TOPPAN",
+      excerpt: "Un nouveau partenariat pour élargir notre gamme de solutions de sécurité et d'authentification.",
+      date: "2025",
+      category: "Partenariat",
+      imageAlt: "Partenariat SATEQ avec TOPPAN"
     }
   ];
 
@@ -142,76 +150,84 @@ const Actualites = () => {
             {/* Contenu principal du hero */}
             <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center md:items-start relative z-10">
               <div className="max-w-xl w-full text-center md:text-left">
-                <div className="mb-2 sm:mb-1.5">
-                  <span className="inline-block px-2.5 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold text-xs uppercase tracking-wide">
-                    ACTUALITÉS
-                  </span>
-                </div>
+               
                 
                 <div className="flex flex-col space-y-2 mb-4">
-                  {/* Version standard pour tous */}
-                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
-                    <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2025)</span> 
-                    1- SATEQ devient le distributeur AUSTRIACARD
-                  </div>
-                  
-                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                  {/* Version standard pour tous (desktop) — cliquable */}
+                  <button onClick={() => handleNewsClick('1')} className="hidden sm:flex items-center bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-normal w-full text-left" aria-label="Actualité 1">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2025)</span>
-                    2- SATEQ signe avec <span className="text-orange-400 font-bold">INTOUCH/BESTICard</span>
-                  </div>
-                  
-                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                    <span className="ml-1">1- SATEQ devient le distributeur AUSTRIACARD</span>
+                  </button>
+
+                  <button onClick={() => handleNewsClick('2')} className="hidden sm:flex items-center bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-normal w-full text-left" aria-label="Actualité 2">
+                    <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2025)</span>
+                    <span className="ml-1">2- SATEQ signe avec <span className="text-orange-400 font-normal">INTOUCH/BestiCard</span></span>
+                  </button>
+
+                  <button onClick={() => handleNewsClick('3')} className="hidden sm:flex items-center bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-normal w-full text-left" aria-label="Actualité 3">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2024)</span>
-                    3- SATEQ devient distributeur de <span className="text-orange-400 font-bold">TPE Verifone</span>
-                  </div>
-                  
-                  <div className="hidden sm:block bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-medium">
+                    <span className="ml-1">3- SATEQ devient distributeur de <span className="text-orange-400 font-normal">TPE Verifone</span></span>
+                  </button>
+
+                  <button onClick={() => handleNewsClick('4')} className="hidden sm:flex items-center bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-normal w-full text-left" aria-label="Actualité 4">
                     <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2024)</span>
-                    4- SATEQ et <span className="text-orange-400 font-bold">S2M</span> deviennent partenaire en Afrique
-                  </div>
+                    <span className="ml-1">4- SATEQ et <span className="text-orange-400 font-normal">S2M</span> deviennent partenaire en Afrique</span>
+                  </button>
+
+                  <button onClick={() => handleNewsClick('5')} className="hidden sm:flex items-center bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-base md:text-lg font-normal w-full text-left" aria-label="Actualité 5">
+                    <span className="text-xs md:text-sm font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5">(2025)</span>
+                    <span className="ml-1">5- SATEQ signe avec <span className="text-orange-400 font-normal">TOPPAN</span></span>
+                  </button>
                   
-                  {/* Version optimisée pour mobile uniquement */}
-                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                  {/* Version optimisée pour mobile uniquement (clic) */}
+                  <button onClick={() => handleNewsClick('1')} className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-normal w-full text-left" aria-label="Actualité 1">
                     <div className="flex items-center">
                       <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2025)</span>
                       <span className="flex-grow">1- SATEQ devient le distributeur AUSTRIACARD</span>
                     </div>
-                  </div>
-                  
-                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                  </button>
+
+                  <button onClick={() => handleNewsClick('2')} className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-normal w-full text-left" aria-label="Actualité 2">
                     <div className="flex items-center">
                       <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2025)</span>
-                      <span className="flex-grow">2- SATEQ signe avec <span className="text-orange-400 font-bold">INTOUCH</span></span>
+                      <span className="flex-grow">2- SATEQ signe avec <span className="text-orange-400 font-normal">INTOUCH</span></span>
                     </div>
-                  </div>
-                  
-                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                  </button>
+
+                  <button onClick={() => handleNewsClick('3')} className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-normal w-full text-left" aria-label="Actualité 3">
                     <div className="flex items-center">
                       <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2024)</span>
-                      <span className="flex-grow">3- SATEQ devient distributeur de <span className="text-orange-400 font-bold">TPE</span></span>
+                      <span className="flex-grow">3- SATEQ devient distributeur de <span className="text-orange-400 font-normal">TPE</span></span>
                     </div>
-                  </div>
-                  
-                  <div className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-medium">
+                  </button>
+
+                  <button onClick={() => handleNewsClick('4')} className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-normal w-full text-left" aria-label="Actualité 4">
                     <div className="flex items-center">
                       <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2024)</span>
-                      <span className="flex-grow">4- SATEQ et <span className="text-orange-400 font-bold">S2M</span> deviennent partenaire</span>
+                      <span className="flex-grow">4- SATEQ et <span className="text-orange-400 font-normal">S2M</span> deviennent partenaire</span>
                     </div>
-                  </div>
+                  </button>
+
+                  <button onClick={() => handleNewsClick('5')} className="sm:hidden bg-white/10 backdrop-blur-sm rounded px-3 py-1.5 text-white text-sm font-normal w-full text-left" aria-label="Actualité 5">
+                    <div className="flex items-center">
+                      <span className="text-xs font-normal bg-white/20 rounded px-1.5 py-0.5 mr-1.5 flex-shrink-0">(2025)</span>
+                      <span className="flex-grow">5- SATEQ devient distributeur <span className="text-orange-400 font-normal">FEITIAN</span></span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
           </section>
         ) : (
           /* Hero avec image de fond selon l'actualité sélectionnée */
-          <section className="relative h-[50vh] overflow-hidden">
+          <section className="relative h-[35vh] overflow-hidden">
             {/* Image de fond plein écran */}
             <div className="absolute inset-0">
               <img 
                 src={
-                  selectedNewsId === "4" ? "/logos/S2m.png" :
+                  selectedNewsId === "4" ? "/logos/S2m.jpg" :
                   selectedNewsId === "3" ? "/logos/conventionintouch.png" : 
-                  selectedNewsId === "2" ? "/logos/signatureaustria.png" : 
+                  selectedNewsId === "2" ? "/logos/signatureaustria.jpg" : 
                   "/logos/actu1.jpg"
                 } 
                 alt={
@@ -232,7 +248,7 @@ const Actualites = () => {
                 <span className="inline-block px-3 py-1 bg-green-600 backdrop-blur-sm rounded-full text-white text-xs uppercase tracking-wide mb-4">
                   ARTICLE
                 </span>
-                <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">
+                <h1 className="text-3xl md:text-5xl font-normal text-white mb-4 drop-shadow-md absolute bottom-10">
                   {selectedNewsId === "4" ? (
                     "La transformation digitale passe par une évolution profonde du management"
                   ) : selectedNewsId === "3" ? (
@@ -240,7 +256,7 @@ const Actualites = () => {
                   ) : selectedNewsId === "2" ? (
                     "Terminal de paiement électronique : qu'est-ce que c'est ?"
                   ) : (
-                    <>SATEQ DIGITAL devient Distributeur des <span className="text-orange-400">TPE VERIFONE</span> en Afrique</>
+                    <div className="text-xl md:text-2xl font-light tracking-wide">SATEQ DIGITAL devient Distributeur des TPE VERIFONE en Afrique</div>
                   )}
                 </h1>
               </div>
@@ -255,7 +271,7 @@ const Actualites = () => {
             <>
               {/* News Section Title - More compact */}
               <div className="flex items-center space-x-2 mb-5">
-                <h2 className="text-xl md:text-2xl font-bold text-foreground">Dernières Actualités</h2>
+                <h2 className="text-xl md:text-2xl font-normal text-foreground">Dernières Actualités</h2>
                 <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
               </div>
 
@@ -272,13 +288,14 @@ const Actualites = () => {
                     }}
                   >
                     <div className="bg-card rounded-2xl overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                      <div className="aspect-square bg-muted/20 flex items-center justify-center relative overflow-hidden">
+                      <div className="relative overflow-hidden aspect-square bg-muted/20">
                         <img
                           src={
                             item.id === '1' ? '/logos/verifone1.png' : 
-                            item.id === '2' ? '/logos/signatureaustria.png' : 
+                            item.id === '2' ? '/logos/signatureaustria.jpg' : 
                             item.id === '3' ? '/logos/conventionintouch.png' : 
-                            item.id === '4' ? '/logos/S2m.png' :
+                            item.id === '4' ? '/logos/S2m.jpg' :
+                            item.id === '5' ? '/logos/toppanactualite.jpg' :
                             `/logos/actu${item.id}${parseInt(item.id) <= 2 ? '.jpg' : '.png'}`
                           }
                           alt={item.imageAlt || item.title}
@@ -289,11 +306,12 @@ const Actualites = () => {
                           <ArrowRight className="w-6 h-6 text-white" />
                         </div>
                       </div>
-                      <div className="py-3 text-center font-bold text-gray-800 bg-white/80 border-t border-gray-100">
+                      <div className="py-3 text-center font-normal text-gray-800 bg-white/80 border-t border-gray-100">
                         {item.id === '1' ? 'TPE Verifone' : 
                          item.id === '2' ? 'Signature AUTRIACARD-SATEQ' : 
                          item.id === '3' ? 'Signature INTOUCH-Besticard' : 
-                         item.id === '4' ? 'Signature S2M-SATEQ' : ''}
+                         item.id === '4' ? 'Signature S2M-SATEQ' :
+                         item.id === '5' ? 'Partenariat SATEQ avec TOPPAN' : ''}
                       </div>
                     </div>
                   </Link>
@@ -330,7 +348,7 @@ const Actualites = () => {
                           className="max-w-full max-h-96 mb-6 object-contain hero-image"
                           fetchPriority="high"
                         />
-                        <h2 className="text-2xl font-bold text-primary mb-4">
+                        <h2 className="text-2xl font-normal text-primary mb-4">
                           {selectedNewsId === "4" ? "Signature S2M-SATEQ" :
                            selectedNewsId === "3" ? "Signature INTOUCH-Besticard" :
                            "Signature AUTRIACARD-SATEQ"}
@@ -342,7 +360,7 @@ const Actualites = () => {
                     </>
                   ) : (
                     <>
-                      <p className="text-lg font-bold mb-6">
+                      <p className="text-lg font-normal mb-6">
                         Le 1er mars 2023 marque la signature du Contrat pour la grande distribution des terminaux VERIFONE dans plusieurs pays africains. Ces terminaux Verifone sont certifiés VISA, Mastercard et GIM-UEMOA.
                       </p>
                       
@@ -373,7 +391,7 @@ const Actualites = () => {
               {/* Colonne latérale - Autres actualités */}
               <div className="w-full md:w-1/3">
                 <div className="sticky top-24">
-                  <h2 className="text-xl font-bold mb-4">Actualités</h2>
+                  <h2 className="text-xl font-normal mb-4">Actualités</h2>
                   
                   {/* Liste verticale d'autres actualités */}
                   <div className="space-y-4">
@@ -422,11 +440,11 @@ const Actualites = () => {
         {/* Additional News Section with CTA - Compact */}
         <div className="bg-gradient-to-br from-primary/5 to-accent/5 py-6">
           <div className="container mx-auto px-6">
-            <div 
+              <div 
               ref={el => newsCardsRef.current.push(el)}
               className="text-center fade-in-up"
             >
-              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+              <h2 className="text-xl md:text-2xl font-normal text-foreground mb-2">
                 Suivez Toute Notre <span className="text-primary">Actualité</span>
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">

@@ -9,9 +9,9 @@ const NewsImagesPreloader = () => {
     // Liste des images à précharger pour les actualités
     const newsImages = [
       '/logos/verifone1.png',       // TPE Verifone
-      '/logos/signatureaustria.png', // Signature AUTRIACARD-SATEQ
+      '/logos/signatureaustria.jpg', // Signature AUTRIACARD-SATEQ
       '/logos/conventionintouch.png', // Signature INTOUCH-Besticard
-      '/logos/S2m.png',             // Signature S2M-SATEQ
+      '/logos/S2m.jpg',             // Signature S2M-SATEQ
     ];
     
     // Force l'affichage des images avec une taille minimale pour déclencher le rendu

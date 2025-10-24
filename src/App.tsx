@@ -26,6 +26,7 @@ import Communication from "./pages/Communication";
 import VoipCallCenter from "./pages/VoipCallCenter";
 import IdentiteNumerique from "./pages/IdentiteNumerique";
 import Monetique from "./pages/Monetique";
+import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/actualites/:id" element={<Actualites />} />
           <Route path="/formation" element={<Formation />} />
           <Route path="/communication" element={<Communication />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/voip-call-center" element={<VoipCallCenter />} />
           <Route path="/identite-numerique" element={<IdentiteNumerique />} />
           <Route path="/monetique" element={<Monetique />} />
