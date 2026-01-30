@@ -5,55 +5,105 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const partners = [{
-  name: "VERIFONE",
-  logo: "Verifone.jpg",
-  color: "#4CAF50", // Vert
-  description: "Terminaux de paiement"
+  name: "Burninfo",
+  logo: "burninfo.png",
+  color: "#4CAF50",
+  description: "Client"
 }, {
-  name: "IXCOM",
-  logo: "ixcom.jpg",
-  color: "#2196F3", // Bleu
-  description: "Infrastructures réseaux"
+  name: "AMSA",
+  logo: "amsa.png",
+  color: "#2196F3",
+  description: "Client"
 }, {
-  name: "ENTRUST",
-  logo: "entrust.jpg",
-  color: "#009688", // Bleu-vert
-  description: "Solutions identité & cartes"
+  name: "Senecartours",
+  logo: "senecartours.png",
+  color: "#009688",
+  description: "Client"
 }, {
-  name: "CryptoAg",
-  logo: "CryptoAg.jpg",
-  color: "#FFC107", // Jaune
-  description: "Solution de cryptage"
+  name: "SETER",
+  logo: "seter.png",
+  color: "#FFC107",
+  description: "Client"
 }, {
-  name: "Austriacard",
-  logo: "austriacard.png",
-  color: "#E91E63", // Rose
-  description: "...."
+  name: "ADER",
+  logo: "ader.png",
+  color: "#E91E63",
+  description: "Client"
 }, {
-  name: "S2M",
-  logo: "s2mlogo.png",
-  color: "#607D8B", // Bleu-gris
-  description: "...."
+  name: "MCTN",
+  logo: "mctn.png",
+  color: "#607D8B",
+  description: "Client"
 }, {
-  name: "M2M",
-  logo: "m2mlogo.png",
-  color: "#3F51B5", // Indigo
-  description: "...."
+  name: "Orange Money",
+  logo: "orangemoney.png",
+  color: "#FF9800",
+  description: "Client"
 }, {
-  name: "Feitian",
-  logo: "feitian.png",
-  color: "#FF5722", // Deep Orange
-  description: "...."
+  name: "EPS",
+  logo: "eps.png",
+  color: "#3F51B5",
+  description: "Client"
 }, {
-  name: "Toppan",
-  logo: "toppan.jpeg",
-  color: "#9C27B0", // Purple
-  description: "...."
+  name: "Samsung",
+  logo: "samsung.png",
+  color: "#000080",
+  description: "Client"
 }, {
-  name: "InTouch",
-  logo: "intouchlogo.png",
-  color: "#00BCD4", // Cyan
-  description: "...."
+  name: "Justice",
+  logo: "justice.png",
+  color: "#8B4513",
+  description: "Client"
+}, {
+  name: "IPRES",
+  logo: "ipres.png",
+  color: "#00BCD4",
+  description: "Client"
+}, {
+  name: "Caisse Mali",
+  logo: "caissemali.png",
+  color: "#4CAF50",
+  description: "Client"
+}, {
+  name: "Senelec",
+  logo: "senelec.png",
+  color: "#FFEB3B",
+  description: "Client"
+}, {
+  name: "CSS",
+  logo: "css.png",
+  color: "#2196F3",
+  description: "Client"
+}, {
+  name: "Tchad",
+  logo: "tchad.png",
+  color: "#009688",
+  description: "Client"
+}, {
+  name: "Fongad",
+  logo: "fongad.png",
+  color: "#E91E63",
+  description: "Client"
+}, {
+  name: "ONES",
+  logo: "ones.png",
+  color: "#9C27B0",
+  description: "Client"
+}, {
+  name: "SEA",
+  logo: "sea.png",
+  color: "#FF5722",
+  description: "Client"
+}, {
+  name: "OLA",
+  logo: "ola.png",
+  color: "#607D8B",
+  description: "Client"
+}, {
+  name: "Elite",
+  logo: "elite.png",
+  color: "#3F51B5",
+  description: "Client"
 }];
 
 export default function Partners() {
@@ -103,12 +153,12 @@ export default function Partners() {
           <div className="flex items-center gap-2 mb-2">
             <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
             <h2 className="text-2xl md:text-3xl font-bold">
-              Nos Partenaires 
+              Nos Références
             </h2>
             <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
           </div>
           <p className="text-orange-500 text-sm md:text-base md:whitespace-nowrap md:overflow-x-auto no-scrollbar w-full px-2">
-            Nous collaborons avec les leaders mondiaux de la technologie pour offrir les meilleures solutions du marché.
+            Ils nous font confiance pour leurs solutions technologiques et leurs projets de transformation digitale.
           </p>
         </div>
 

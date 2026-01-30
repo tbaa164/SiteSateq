@@ -130,110 +130,70 @@ const SystemesReseaux = () => {
         </div>
 
         {/* Services List - Compact Design */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-start">
           <motion.div 
-            className="space-y-4"
+            className="flex flex-col h-full"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-primary mb-4 border-b-2 border-primary pb-1 inline-block">
-              Domaines d'activités
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Systèmes informatiques
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="space-y-3 flex-1">
               <motion.div 
-                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
-                whileHover={{ scale: 1.01 }}
+                className="border-l-4 border-green-600 bg-white p-4 hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
               >
-                <h3 className="font-semibold text-foreground text-base flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                  Électricité MT/BT / Énergie Solaire
+                <h3 className="font-semibold text-gray-900 text-base mb-1">
+                  Infrastructures
                 </h3>
-                <p className="text-muted-foreground text-sm mt-1">Installation et maintenance d'infrastructures électriques et systèmes photovoltaïques</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Conception, ingénierie et réalisation de solutions sécurisées
+                </p>
               </motion.div>
 
               <motion.div 
-                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
-                whileHover={{ scale: 1.01 }}
+                className="border-l-4 border-gray-700 bg-white p-4 hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
               >
-                <h3 className="font-semibold text-foreground text-base flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                  Infrastructures informatiques
+                <h3 className="font-semibold text-gray-900 text-base mb-1">
+                  Matériels
                 </h3>
-                <p className="text-muted-foreground text-sm mt-1">Conception et déploiement de réseaux et centres de données</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Serveurs, ordinateurs, périphériques avec maintenance et support technique
+                </p>
               </motion.div>
 
               <motion.div 
-                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
-                whileHover={{ scale: 1.01 }}
+                className="border-l-4 border-green-600 bg-white p-4 hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
               >
-                <h3 className="font-semibold text-foreground text-base flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                  Équipements de télécommunication
+                <h3 className="font-semibold text-gray-900 text-base mb-1">
+                  Crypto et cybersécurité
                 </h3>
-                <p className="text-muted-foreground text-sm mt-1">Solutions de communication avancées et systèmes radio</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
-                whileHover={{ scale: 1.01 }}
-              >
-                <h3 className="font-semibold text-foreground text-base flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                  Vidéosurveillance & Access Control
-                </h3>
-                <p className="text-muted-foreground text-sm mt-1">Systèmes de surveillance et contrôle d'accès intelligents</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
-                whileHover={{ scale: 1.01 }}
-              >
-                <h3 className="font-semibold text-foreground text-base flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                  Cryptage & Cybersécurité
-                </h3>
-                <p className="text-muted-foreground text-sm mt-1">Protection avancée des données et sécurisation des communications</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
-                whileHover={{ scale: 1.01 }}
-              >
-                <h3 className="font-semibold text-foreground text-base flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                  Internet / Intranet / Call Center VoIP
-                </h3>
-                <p className="text-muted-foreground text-sm mt-1">Solutions de connectivité et centres d'appels modernes</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Systèmes dédiés avec équipements de cryptage avancés
+                </p>
               </motion.div>
             </div>
           </motion.div>
 
           {/* Process Steps - Modern Image Section */}
           <motion.div 
-            className="space-y-6"
+            className="h-full"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-3xl font-bold text-primary mb-8 border-b-2 border-primary pb-2 inline-block">
-              Processus
-            </h2>
-            
-            {/* Processus avec étiquettes stylisées comme sur l'image */}
-            <div className="mb-8">
-              <div className="relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src="/logos/ingenierie.jpg" 
-                  alt="Notre processus d'ingénierie" 
-                  className="w-full h-auto object-cover rounded-xl"
-                />
-              
-              </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src="/logos/ingenierie.jpg" 
+                alt="Notre processus d'ingénierie" 
+                className="w-full h-auto object-contain rounded-xl"
+              />
             </div>
-
-            {/* Exemples de réalisations - Carousel pleine largeur */}
           </motion.div>
         </div>
 

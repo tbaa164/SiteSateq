@@ -139,7 +139,16 @@ const Header = () => {
   };
   
   const navItems = [
-    { name: "Actualités", href: "/actualites" },
+    { 
+      name: "A propos de nous", 
+      href: "#apropos",
+      dropdown: [
+        { name: "Qui sommes nous ?", href: "/qui-sommes-nous" },
+        { name: "Vision, mission, ambition", href: "/vision-mission-ambition" },
+        { name: "Nos valeurs", href: "/nos-valeurs" },
+        { name: "Pourquoi nous choisir ?", href: "/pourquoi-nous-choisir" }
+      ]
+    },
     { 
       name: "Produits", 
       href: "/produits",
@@ -169,8 +178,9 @@ const Header = () => {
       name: t('nav.communication'), 
       href: "/communication",
       dropdown: [
-        { name: "Solutions Voix sur IP", href: "/voip-call-center" },
-        { name: "Publicité", href: "/communication" }
+        { name: "Stratégie de com", href: "/strategie-communication" },
+        { name: "Supports publicitaires", href: "/supports-publicitaires" },
+        { name: "Evénementiel", href: "/evenementiel" }
       ]
     },
       { name: "Vidéos", href: "/videos" },
@@ -339,7 +349,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                    {item.name !== "Actualités" && item.name !== "Contact" && (
+                    {item.name !== "Contact" && (
                       <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

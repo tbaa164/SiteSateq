@@ -40,7 +40,7 @@ const IdentiteNumerique = () => {
           <div className="relative animate-float group">
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-600/30 via-orange-400/30 to-white/20 rounded-xl blur-xl transform scale-110 animate-pulse"></div>
             <img 
-              src="/logos/Carte1.jpg" 
+              src="/logos/digital.png" 
               alt="Carte d'identité numérique" 
               className="relative z-10 w-full h-auto object-contain drop-shadow-2xl"
             />
@@ -66,131 +66,75 @@ const IdentiteNumerique = () => {
       
       {/* Contenu principal */}
       <main className="container mx-auto px-4 py-8">
-        {/* Cartes numérisées - Section compacte */}
-        <div className="max-w-7xl mx-auto mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-            Les systèmes de <span className="text-primary">CARTES</span> numérisées
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Informations principales */}
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="h-8 w-2 bg-gradient-to-b from-primary to-blue-600 rounded-full"></div>
-                  <h3 className="text-xl font-bold text-gray-800">Types de cartes</h3>
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-start px-3 py-2 bg-gray-50 rounded-lg transition-all hover:bg-gray-100">
-                    <svg className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <p className="text-gray-800 font-medium">Carte d'identité - Permis de conduire - Carte grise</p>
-                  </div>
-                  <div className="flex items-start px-3 py-2 bg-gray-50 rounded-lg transition-all hover:bg-gray-100">
-                    <svg className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <p className="text-gray-800 font-medium">Cartes privatives - Cartes bancaires - Badges multifonctions</p>
-                  </div>
-                </div>
-                
-                <div className="mt-6">
-                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border-l-4 border-primary">
-                    <p className="font-medium text-blue-800">
-                      Avec ses partenaires, <span className="font-bold">SATEQ DIGITAL</span> peut fournir des cartes polycarbonate avec une puce intégrant l'identité civile et la biométrie du Titulaire.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Image de carte */}
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md p-6 flex flex-col justify-center items-center">
-              <img 
-                src="/logos/identité1.png" 
-                alt="Exemple de carte d'identité académique" 
-                className="w-full max-w-md h-auto object-contain rounded-lg shadow-sm hover:shadow-md transition-all mb-4"
-              />
-              <p className="text-center text-gray-600 text-sm mt-2">
-                Exemple de carte d'identité avec informations personnelles sécurisées et QR code
-              </p>
-            </div>
-          </div>
+        {/* Introduction simple */}
+        <div className="max-w-4xl mx-auto mb-12 text-center">
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+            Nous développons des plateformes d'identité intégrant des applications diverses.
+          </p>
         </div>
         
-        {/* Utilisations et applications */}
-        <div className="max-w-7xl mx-auto mt-8">
-          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl p-6">
-            <h3 className="text-xl md:text-2xl font-bold text-center mb-6">Applications</h3>
+        {/* Applications */}
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">Applications</h2>
+          <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Carte 1 */}
-              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.1s' }}>
-                <div className="h-2 bg-gradient-to-r from-blue-700 to-blue-400"></div>
-                <CardContent className="pt-6">
-                  <h4 className="text-lg font-semibold mb-2 text-blue-700">Sécurité de Bâtiments</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
-                      <span>Vidéosurveillance, Sécurité Incendie</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
-                      <span>Contrôle d'accès électronique</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
-                      <span>Badges Employés et Visiteurs</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="border-l-4 border-gray-700 bg-gray-50 p-6 hover:shadow-md transition-all">
+                <h4 className="text-lg font-semibold mb-4 text-gray-800">Sécurité de Bâtiments</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Contrôle d'accès électronique</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Badges Employés et Visiteurs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Vidéosurveillance, Sécurité Incendie</span>
+                  </li>
+                </ul>
+              </div>
               
               {/* Carte 2 */}
-              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.3s' }}>
-                <div className="h-2 bg-gradient-to-r from-green-700 to-green-400"></div>
-                <CardContent className="pt-6">
-                  <h4 className="text-lg font-semibold mb-2 text-green-700">Services ID Gouvernementaux</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
-                      <span>Cartes d'Identité Nationale et Passeports Biométriques</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
-                      <span>Permis de Conduire et Carte Grise (véhicules, motocycles)</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
-                      <span>Carte étudiant, Carte retraité, Carte de santé</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="border-l-4 border-gray-700 bg-gray-50 p-6 hover:shadow-md transition-all">
+                <h4 className="text-lg font-semibold mb-4 text-gray-800">Services ID Gouvernementaux</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Carte d'Identité biométrique, Passeport</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Permis de Conduire</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Carte Grise véhicule et motocycle</span>
+                  </li>
+                </ul>
+              </div>
               
               {/* Carte 3 */}
-              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.5s' }}>
-                <div className="h-2 bg-gradient-to-r from-amber-600 to-amber-400"></div>
-                <CardContent className="pt-6">
-                  <h4 className="text-lg font-semibold mb-2 text-amber-700">Services Financiers Digitaux</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
-                      <span>Authentification électronique (KYC)</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
-                      <span>Cartes de Retrait/Paiement (bancaire, privatif QR-Code)</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
-                      <span>Mobile Money (Transfert d'Argent, Paiement TPE, Paiement Online)</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="border-l-4 border-gray-700 bg-gray-50 p-6 hover:shadow-md transition-all">
+                <h4 className="text-lg font-semibold mb-4 text-gray-800">Services Financiers Digitaux</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Authentification électronique (KYC)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Cartes de Retrait/Paiement (bancaire, privatif QR-Code)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 mt-1">—</span>
+                    <span>Mobile Money (Transfert d'Argent, Paiement TPE, Paiement Online)</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

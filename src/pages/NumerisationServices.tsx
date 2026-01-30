@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 
 const NumerisationServices = () => {
   const domains = [
-    "Administration, Finance",
-    "Éducation, Santé",
-    "Banque, Assurance",
-    "Industrie, Commerce",
-    "Sport, Association"
+    "Administration, Finance publique",
+    "Éducation, Santé, Gestion RH",
+    "Banques, Assurances",
+    "Commerce, Industrie, Artisanat, Culture",
+    "Events, Sport, Associations, Tontines, etc …"
   ];
   
   // Pour le titre de la page
@@ -133,7 +133,7 @@ const NumerisationServices = () => {
               >
                 <h3 className="text-2xl font-semibold text-gray-800 mb-6 leading-snug">
                   SATEQ DIGITAL modernise les services en numérisant les procédés dans plusieurs
-                  secteurs de l'entreprise :
+                  secteurs :
                 </h3>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-10">

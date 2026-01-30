@@ -87,7 +87,7 @@ const Cartes = () => {
             {/* Image de carte - optimisée pour mobile */}
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md p-4 sm:p-6 flex flex-col justify-center items-center">
               <img 
-                src="/logos/quatrecartes.jpg" 
+                src="/logos/cartehomme.png" 
                 alt="Différents types de cartes" 
                 className="w-full max-w-full sm:max-w-md h-auto object-contain rounded-lg shadow-sm hover:shadow-md transition-all mb-3 sm:mb-4"
               />

@@ -37,10 +37,10 @@ const Terminaux = () => {
           </div>
 
           {/* Contenu Hero */}
-          <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="container mx-auto px-4 py-16 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h1 
-                className="text-3xl md:text-5xl font-bold mb-6 text-white"
+                className="text-3xl md:text-5xl font-bold mb-4 text-white"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -48,19 +48,14 @@ const Terminaux = () => {
                 Les <span className="text-green-400">Terminaux</span> électroniques (TPE)
               </motion.h1>
               
-              <motion.div
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-10"
+              <motion.p
+                className="text-lg md:text-xl text-white/90 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
-                Les réseaux de transfert d'argent et les plateformes de paiement de services ont permis le développement de l'inclusion financière et la solidarité économique en Afrique.
-                </p>
-                <p className="text-lg md:text-xl text-white leading-relaxed">
-                  Les Téléphones, les Terminaux de paiement (TPE) et leurs applications ont fondamentalement changé l'Economie Numérique et les comportements des populations africaines.
-                </p>
-              </motion.div>
+                Solution de paiement mobile avec des TPE contact et contactless
+              </motion.p>
             </div>
           </div>
 

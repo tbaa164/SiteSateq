@@ -20,10 +20,15 @@ import Produits from "./pages/Produits";
 import SystemesReseaux from "./pages/SystemesReseaux";
 import Cartes from "./pages/Cartes";
 import Terminaux from "./pages/Terminaux";
-import Actualites from "./pages/Actualites";
 import Formation from "./pages/Formation";
+import QuiSommesNous from "./pages/QuiSommesNous";
+import VisionMissionAmbition from "./pages/VisionMissionAmbition";
+import NosValeurs from "./pages/NosValeurs";
+import PourquoiNousChoisir from "./pages/PourquoiNousChoisir";
 import Communication from "./pages/Communication";
-import VoipCallCenter from "./pages/VoipCallCenter";
+import StrategieCommunication from "./pages/StrategieCommunication";
+import SupportsPublicitaires from "./pages/SupportsPublicitaires";
+import Evenementiel from "./pages/Evenementiel";
 import IdentiteNumerique from "./pages/IdentiteNumerique";
 import Monetique from "./pages/Monetique";
 import Videos from "./pages/Videos";
@@ -47,6 +52,10 @@ const App = () => (
   <TPEImagesPreloader />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/qui-sommes-nous" element={<QuiSommesNous />} />
+          <Route path="/vision-mission-ambition" element={<VisionMissionAmbition />} />
+          <Route path="/nos-valeurs" element={<NosValeurs />} />
+          <Route path="/pourquoi-nous-choisir" element={<PourquoiNousChoisir />} />
           {/* Route supprimée : mot-directeur */}
           <Route path="/references" element={<References />} />
           <Route path="/digitalisation" element={<NumerisationServices />} /> {/* Redirect to NumerisationServices */}
@@ -56,12 +65,12 @@ const App = () => (
           <Route path="/systemes-reseaux" element={<SystemesReseaux />} />
           <Route path="/cartes" element={<Cartes />} />
           <Route path="/terminaux" element={<Terminaux />} />
-          <Route path="/actualites" element={<Actualites />} />
-          <Route path="/actualites/:id" element={<Actualites />} />
           <Route path="/formation" element={<Formation />} />
           <Route path="/communication" element={<Communication />} />
+          <Route path="/strategie-communication" element={<StrategieCommunication />} />
+          <Route path="/supports-publicitaires" element={<SupportsPublicitaires />} />
+          <Route path="/evenementiel" element={<Evenementiel />} />
           <Route path="/videos" element={<Videos />} />
-          <Route path="/voip-call-center" element={<VoipCallCenter />} />
           <Route path="/identite-numerique" element={<IdentiteNumerique />} />
           <Route path="/monetique" element={<Monetique />} />
         
