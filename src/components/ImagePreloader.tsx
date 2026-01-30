@@ -13,8 +13,8 @@ const CRITICAL_IMAGES = [
   '/logos/formation1.png',
   '/logos/formation3.png',
   '/logos/commu.png',
-  '/logos/quatrecartes.jpg',
-  '/logos/Carte1.jpg',
+  '/logos/cartehomme.png',
+  '/logos/digital.png',
   '/logos/identité1.png',
   
   // Images secondaires importantes
@@ -36,6 +36,12 @@ const CRITICAL_IMAGES = [
   '/logos/TPEF20FP.png',
   '/logos/TPEVerifone.png',
   '/logos/TPEMPOS.png',
+  
+  // Images des pages A propos de nous
+  '/logos/somme1.png',
+  '/logos/somme2.png',
+  '/logos/vision.png',
+  '/logos/proposdenous.png',
   
   // Images additionnelles
   '/logos/logosite.png',
