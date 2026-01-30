@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 // Liste des composants/pages à précharger
 const routesToPreload = [
   () => import('../pages/Index'),
-  () => import('../pages/Actualites'),
   () => import('../pages/Cartes'),
   () => import('../pages/Communication'),
   () => import('../pages/Digitalisation'),
@@ -16,7 +15,13 @@ const routesToPreload = [
   () => import('../pages/References'),
   () => import('../pages/SystemesReseaux'),
   () => import('../pages/Terminaux'),
-  () => import('../pages/VoipCallCenter'),
+  () => import('../pages/QuiSommesNous'),
+  () => import('../pages/VisionMissionAmbition'),
+  () => import('../pages/NosValeurs'),
+  () => import('../pages/PourquoiNousChoisir'),
+  () => import('../pages/StrategieCommunication'),
+  () => import('../pages/SupportsPublicitaires'),
+  () => import('../pages/Evenementiel'),
   () => import('../components/Hero'),
 ];
 
