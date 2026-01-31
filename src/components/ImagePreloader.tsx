@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 const CRITICAL_IMAGES = [
   // Images des Hero sections (chemins exacts comme utilisés dans les composants)
   '/logos/barriere.jpg',
-  '/logos/MrWane.jpg',
+  '/logos/MrWane.png',
   '/logos/LOGO-SATEQ-DIGITAL.jpg',
   '/logos/systemereseauxHeaderNew.jpg',
   '/logos/terminaux1.png',

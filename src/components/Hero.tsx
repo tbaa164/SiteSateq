@@ -128,20 +128,21 @@ export default function Hero() {
                 {/* Texte à gauche */}
                 <div className="lg:w-3/4 pr-4">
                   <div className="space-y-4 text-gray-700 text-sm lg:text-base">
-                    <p className="max-w-full">
-                      Notre entreprise, <strong>Société Africaine de Technologies et d'Équipements (SATEQ)</strong> créée en 2009, a engagé une stratégie de gestion digitale de projets structurants pour notre continent. Nos solutions intègrent l'environnement trouvé sur site en développant une économie verte dans toutes les infrastructures et systèmes de production.
+                    <p className="max-w-full text-justify">
+                      Il est clairement admis par tous que les technologies numériques ont radicalement transformé la gouvernance mondiale. Aucun secteur n'est épargné : les Etats, les entreprises et les populations au quotidien.
                     </p>
-                    <p className="max-w-full">
-                      Des experts IT de haut niveau ont pu développer des applications innovantes, adaptées à l'écosystème numérique des pays africains, surtout dans les zones rurales dépourvues d'électricité et d'internet.
+                    <p className="max-w-full text-justify">
+                      Si bien qu'aujourd'hui, ce sont des systèmes électroniques et des plateformes digitales qui régissent l'économie mondiale et la circulation des biens et des personnes. Les systèmes d'identification par biométrie ou QR-Code, la carte bancaire, le mobile money et les réseaux sociaux ont fini de changer complètement le mode de vie de notre société.
                     </p>
-                    <p className="max-w-full">
-                      Grâce à un réseau de partenaires à l'échelle internationale, nous avons pu concevoir et réaliser des solutions certifiées sur l'identité numérique et les paiements électroniques.
+                    <p className="max-w-full text-justify">
+                      Attention, toutes ces technologies avancées engendrent de nouveaux défis.
+                      La sécurité et la préservation des ressources et de nos valeurs constituent des enjeux majeurs qui doivent préoccuper tous les pays, surtout en Afrique.
                     </p>
-                    <p className="max-w-full">
-                      C'est pourquoi nous comptons des références dans l'administration, les multinationales, le secteur privé formel et informel ainsi que les associations que nous accompagnons dans plusieurs projets de numérisation de leurs membres.
+                    <p className="max-w-full text-justify">
+                      Partout, les entreprises et les Etats cherchent solution pour leur protection et le bien-être des populations devenues plus exigeantes en matière de sécurité, d'éducation, de liberté, de transparence et de développement économique et social.
                     </p>
-                    <p className="max-w-full">
-                      Tous nos équipements et solutions sont garantis par nos soins, nos ingénieurs assurant les formations aux utilisateurs avec un call center pour le service après-vente.
+                    <p className="max-w-full text-justify">
+                      C'est pourquoi notre Groupe SATEQ DIGITAL s'est spécialisé dans l'intégration de solutions innovantes et durables, orientées vers la transformation digitale, l'optimisation des infrastructures et réseaux, la sécurité électronique, les plateformes monétiques et la communication visuelle à forte valeur ajoutée.
                     </p>
                     
                     {/* Signature */}
@@ -152,13 +153,12 @@ export default function Hero() {
                   </div>
                 </div>
                 
-                {/* Image à droite - remontée légèrement */}
-                <div className="lg:w-1/4 lg:-mt-7 flex items-start">
+                {/* Image à droite - même hauteur que le texte */}
+                <div className="lg:w-1/4 flex items-stretch">
                   <img 
-                    src="/logos/MrWane.jpg" 
+                    src="/logos/MrWane.png" 
                     alt="Monsieur Wane - Directeur Général" 
-                    className="w-full rounded-lg shadow-md transform scale-90 origin-top"
-                    style={{ maxHeight: "90%" }}
+                    className="w-full h-full rounded-lg shadow-md object-contain"
                   />
                 </div>
               </div>
