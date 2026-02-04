@@ -197,6 +197,81 @@ const SystemesReseaux = () => {
           </motion.div>
         </div>
 
+        {/* Processus Section - Same layout as Systèmes informatiques */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-start">
+          <motion.div 
+            className="flex flex-col h-full"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Processus
+            </h2>
+            
+            <div className="space-y-3 flex-1">
+              <motion.div 
+                className="border-l-4 border-green-600 bg-white p-4 hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <h3 className="font-semibold text-gray-900 text-base mb-1">
+                  Électricité MT/BT / Énergie Solaire
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Câblages, installations solaires et circuits de climatisation
+                </p>
+              </motion.div>
+
+              <motion.div 
+                className="border-l-4 border-gray-700 bg-white p-4 hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <h3 className="font-semibold text-gray-900 text-base mb-1">
+                  Télécommunications
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Téléphonie VoIP avec conférences audio et visio professionnelles
+                </p>
+              </motion.div>
+
+              <motion.div 
+                className="border-l-4 border-green-600 bg-white p-4 hover:shadow-lg transition-all"
+                whileHover={{ x: 5 }}
+              >
+                <h3 className="font-semibold text-gray-900 text-base mb-1">
+                  Contrôle d'accès & Vidéosurveillance
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Sécurité électronique intégrant contrôle et vidéosurveillance complète
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Images Grid à droite - 2x2 plus compact */}
+          <motion.div 
+            className="flex items-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="grid grid-cols-2 gap-3 w-full max-w-md">
+              {[1, 2, 3, 4].map((num) => (
+                <div 
+                  key={num}
+                  className="relative overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src={`/logos/processus${num}.png`} 
+                    alt={`Processus ${num}`} 
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
         {/* Carousel en pleine largeur comme dans l'image */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-foreground mb-8">

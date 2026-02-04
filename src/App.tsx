@@ -31,6 +31,7 @@ import SupportsPublicitaires from "./pages/SupportsPublicitaires";
 import Evenementiel from "./pages/Evenementiel";
 import IdentiteNumerique from "./pages/IdentiteNumerique";
 import Monetique from "./pages/Monetique";
+import Maintenance from "./pages/Maintenance";
 import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 
@@ -66,6 +67,7 @@ const App = () => (
           <Route path="/cartes" element={<Cartes />} />
           <Route path="/terminaux" element={<Terminaux />} />
           <Route path="/formation" element={<Formation />} />
+          <Route path="/maintenance" element={<Maintenance />} />
           <Route path="/communication" element={<Communication />} />
           <Route path="/strategie-communication" element={<StrategieCommunication />} />
           <Route path="/supports-publicitaires" element={<SupportsPublicitaires />} />

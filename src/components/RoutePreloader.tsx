@@ -9,6 +9,7 @@ const routesToPreload = [
   () => import('../pages/Digitalisation'),
   () => import('../pages/Formation'),
   () => import('../pages/IdentiteNumerique'),
+  () => import('../pages/Maintenance'),
   () => import('../pages/Monetique'),
   () => import('../pages/PlateformesMonetiques'),
   () => import('../pages/Produits'),

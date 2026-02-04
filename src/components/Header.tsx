@@ -163,7 +163,8 @@ const Header = () => {
       href: "#services",
       dropdown: [
         { name: "Digitalisation", href: "/numerisation-services" },
-        { name: t('nav.training'), href: "/formation" }
+        { name: t('nav.training'), href: "/formation" },
+        { name: "Maintenance", href: "/maintenance" }
       ]
     },
     { 
