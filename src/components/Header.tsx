@@ -216,7 +216,7 @@ const Header = () => {
                 ) : item.dropdown ? (
                   <div className="relative" ref={(el) => dropdownRefs.current[item.name] = el}>
                     <button 
-                      className={`px-4 xl:px-6 py-2 transition-all duration-200 font-medium flex items-center gap-1.5 h-full relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 ${
+                      className={`px-4 xl:px-6 py-2 transition-all duration-200 font-medium flex items-center gap-1.5 h-full relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300 whitespace-nowrap ${
                         openDropdown === item.name ? 'text-primary after:w-full' : 
                         hasActiveChild(item) ? 'text-primary after:w-full' : 
                         'text-gray-700 hover:text-primary'
