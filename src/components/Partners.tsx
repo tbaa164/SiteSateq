@@ -194,7 +194,7 @@ export default function Partners() {
                         <img 
                           src={`/logos/${partner.logo}`} 
                           alt={partner.name} 
-                          className="w-full h-full object-contain filter drop-shadow-sm" 
+                          className={`w-full h-full object-contain filter drop-shadow-sm ${partner.logo === 'mctn.png' ? 'scale-[2.5]' : ''}`}
                           onError={(e) => {
                             // Fallback en cas d'échec de chargement de l'image
                             e.currentTarget.style.display = 'none';
