@@ -140,7 +140,7 @@ const Header = () => {
   
   const navItems = [
     { 
-      name: "A propos de nous", 
+      name: "A propos", 
       href: "#apropos",
       dropdown: [
         { name: "Qui sommes nous ?", href: "/qui-sommes-nous" },
