@@ -208,7 +208,7 @@ export default function Partners() {
                             objectFit: 'contain',
                             transform: partner.logo === 'mctn.png' ? 'scale(1.5)' :
                                       partner.logo === 'amsa.png' ? 'scale(1.5)' :
-                                      partner.logo === 'css.png' ? 'scale(2)' :
+                                      partner.logo === 'css.png' ? 'scale(1.2)' :
                                       partner.logo === 'orangemoney.png' ? 'scale(0.75)' :
                                       partner.logo === 'seter.png' ? 'scale(0.75)' :
                                       partner.logo === 'justice.png' ? 'scale(0.75)' :
