@@ -144,7 +144,7 @@ export default function Hero() {
                     {/* Signature */}
                     <div className="pt-1 mt-0 text-right">
                       <img src="/logos/signature.png" alt="A.Tidiane WANE" className="ml-auto h-14 md:h-16 mb-1" />
-                      <p className="text-gray-800">Ingénieur, Administrateur General</p>
+                      <p className="text-gray-800">Ingénieur, Administrateur Général</p>
                     </div>
                   </div>
                 </div>
