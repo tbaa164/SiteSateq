@@ -206,10 +206,11 @@ export default function Partners() {
                             width: '100%',
                             height: '100%',
                             objectFit: 'contain',
-                            transform: partner.logo === 'mctn.png' ? 'scale(1.5)' :
+                            transform: partner.logo === 'mctn.png' ? 'scale(1.3)' :
                                       partner.logo === 'amsa.png' ? 'scale(1.5)' :
                                       partner.logo === 'css.png' ? 'scale(1.2)' :
-                                      partner.logo === 'orangemoney.png' ? 'scale(0.75)' :
+                                      partner.logo === 'orangemoney.png' ? 'scale(1)' :
+                                      partner.logo === 'uba.png' ? 'scale(1.3)' :
                                       partner.logo === 'seter.png' ? 'scale(0.75)' :
                                       partner.logo === 'justice.png' ? 'scale(0.75)' :
                                       'scale(1)'

@@ -95,10 +95,10 @@ const QuiSommesNous = () => {
                 <div className="space-y-6">
                   <div>
                     <div className="inline-block mb-3">
-                      <span className="text-orange-500 font-bold text-base tracking-wider uppercase">Notre Histoire</span>
+                      <span className="text-orange-500 font-bold text-3xl md:text-4xl tracking-wider uppercase">Notre Histoire</span>
                       <div className="h-1 w-16 bg-orange-500 rounded-full mt-1"></div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-base font-bold text-gray-900 mb-4">
                       La Société Africaine de Technologie et d'Équipements
                     </h2>
                    
@@ -136,10 +136,10 @@ const QuiSommesNous = () => {
                 <div className="space-y-6">
                   <div>
                     <div className="inline-block mb-3">
-                      <span className="text-orange-500 font-bold text-base tracking-wider uppercase">Notre Expertise</span>
+                      <span className="text-orange-500 font-bold text-3xl md:text-4xl tracking-wider uppercase">Notre Expertise</span>
                       <div className="h-1 w-16 bg-orange-500 rounded-full mt-1"></div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-base font-bold text-gray-900 mb-4">
                       SATEQ DIGITAL
                     </h2>
                   </div>

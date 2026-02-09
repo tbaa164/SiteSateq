@@ -73,7 +73,7 @@ export default function Hero() {
               {/* Wider headline with more horizontal space */}
               <div className="mb-3 relative flex items-center">
                 <h3 className="text-lg md:text-xl lg:text-2xl text-gray-800 leading-snug max-w-full">
-                  <span className="text-primary">SATEQ DIGITAL</span> permet à ses clients de moderniser leurs procédés en optimisant les infrastructures réseaux et systèmes de production.
+                  <span className="text-primary">SATEQ DIGITAL</span> permet à ses clients de moderniser leurs procédés en optimisant les infrastructures réseaux et les systèmes de production.
                 </h3>
               </div>
               
@@ -144,7 +144,7 @@ export default function Hero() {
                     {/* Signature */}
                     <div className="pt-1 mt-0 text-right">
                       <img src="/logos/signature.png" alt="A.Tidiane WANE" className="ml-auto h-14 md:h-16 mb-1" />
-                      <p className="text-gray-800">Ingénieur, Administrateur Général</p>
+                      <p className="text-gray-800 font-bold">Ingénieur, Administrateur Général</p>
                     </div>
                   </div>
                 </div>
