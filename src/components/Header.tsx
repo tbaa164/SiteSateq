@@ -197,7 +197,7 @@ const Header = () => {
             <img 
               src="/logos/LOGO-SATEQ-DIGITAL.jpg" 
               alt="SATEQ Digital Group" 
-              className="h-20 w-auto object-contain"
+              className="h-50 w-auto object-contain"
             />
           </Link>
 

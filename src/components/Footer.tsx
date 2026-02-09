@@ -81,8 +81,8 @@ export default function Footer() {
               </div>
               
               <p className="text-gray-300 leading-relaxed text-base">
-                SATEQ Digital Group est une Société de services spécialisée en transformation digitale.
-                Notre mission est d'accompagner les organisations africaines vers la digitalisation.
+                SATEQ Digital Group est une entreprise spécialisée en ingénierie et transformation digitale.
+                Notre mission est d'accompagner les organisations africaines dans leurs projets de modernisation.
               </p>
               
               {/* Social Links */}
@@ -173,7 +173,7 @@ export default function Footer() {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                   </div>
-                  <p className="text-gray-300 text-sm">( +221 ) 33 822 53 10</p>
+                  <p className="text-gray-300 text-sm">( +221 ) 33 864 57 24</p>
                 </div>
                 
                 <div className="flex items-center space-x-3">

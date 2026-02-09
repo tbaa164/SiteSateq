@@ -76,7 +76,7 @@ const QuiSommesNous = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/logos/somme1.png" 
+                    src="/logos/Presentation_salam.jpg" 
                     alt="SATEQ Digital Group - Transformation numérique" 
                     className="w-full h-auto object-cover"
                   />
@@ -95,25 +95,23 @@ const QuiSommesNous = () => {
                 <div className="space-y-6">
                   <div>
                     <div className="inline-block mb-3">
-                      <span className="text-orange-500 font-bold text-sm tracking-wider uppercase">Notre Histoire</span>
+                      <span className="text-orange-500 font-bold text-base tracking-wider uppercase">Notre Histoire</span>
                       <div className="h-1 w-16 bg-orange-500 rounded-full mt-1"></div>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                       La Société Africaine de Technologie et d'Équipements
                     </h2>
-                    <p className="text-lg font-semibold text-gray-800 mb-2">
-                      (SATEQ DIGITAL GROUP)
-                    </p>
+                   
                   </div>
                   
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p className="text-base md:text-lg">
-                      Créée en <span className="font-semibold text-green-700">2009</span>, SATEQ accompagne la transformation numérique des administrations publiques et du secteur privé.
+                      Créée en <span className="font-semibold text-green-700">2009</span>, SATEQ DIGITAL GROUP accompagne la transformation numérique des administrations publiques et du secteur privé.
                     </p>
                     
                     <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
                       <p className="text-base md:text-lg font-medium text-gray-800">
-                        Partenaire technologique de confiance, nous offrons des solutions de sécurisation de données et des systèmes qui renforcent durablement leur performance.
+                        Partenaire technologique de confiance, nous déployons des solutions de sécurisation de données et des systèmes d'informations qui renforcent durablement leur performance.
                       </p>
                     </div>
                   </div>
@@ -138,7 +136,7 @@ const QuiSommesNous = () => {
                 <div className="space-y-6">
                   <div>
                     <div className="inline-block mb-3">
-                      <span className="text-orange-500 font-bold text-sm tracking-wider uppercase">Notre Expertise</span>
+                      <span className="text-orange-500 font-bold text-base tracking-wider uppercase">Notre Expertise</span>
                       <div className="h-1 w-16 bg-orange-500 rounded-full mt-1"></div>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -172,7 +170,7 @@ const QuiSommesNous = () => {
                         <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                         <span className="font-semibold text-orange-600">Innovation</span>
                       </div>
-                      <p className="text-sm text-gray-600">Outils décisionnels</p>
+                      <p className="text-sm text-gray-600">Recherche & développement</p>
                     </div>
                   </div>
                 </div>

@@ -175,7 +175,7 @@ const NosValeurs = () => {
                     <div className="h-px w-16 bg-green-500"></div>
                   </div>
                   <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                    Ces cinq piliers fondamentaux façonnent notre culture d'entreprise et garantissent l'excellence de nos services auprès de nos clients et partenaires.
+                    Ces cinq piliers fondamentaux façonnent notre culture d'entreprise et garantissent l'excellence de nos services.
                   </p>
                 </div>
               </div>

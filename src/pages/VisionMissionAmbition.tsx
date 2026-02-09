@@ -33,7 +33,7 @@ const VisionMissionAmbition = () => {
                 transition={{ duration: 0.8 }}
                 className="max-w-3xl"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 md:whitespace-nowrap">
                   Vision - Mission - Ambition
                 </h1>
                 <p className="text-xl md:text-2xl text-green-100 font-light italic">
@@ -91,9 +91,9 @@ const VisionMissionAmbition = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="flex flex-col md:flex-row-reverse md:items-start gap-8">
+                <div className="flex flex-col md:flex-row md:items-start gap-8">
                   <div className="md:w-1/3 flex-shrink-0">
-                    <div className="sticky top-24 md:text-right">
+                    <div className="sticky top-24">
                       <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg mb-4">
                         <Compass className="w-10 h-10 text-white" strokeWidth={1.5} />
                       </div>
@@ -104,7 +104,7 @@ const VisionMissionAmbition = () => {
                   </div>
                   
                   <div className="md:w-2/3">
-                    <div className="bg-gradient-to-br from-orange-50 to-white border-r-8 border-orange-500 p-8 md:p-10 rounded-l-3xl shadow-xl">
+                    <div className="bg-gradient-to-br from-orange-50 to-white border-l-8 border-orange-500 p-8 md:p-10 rounded-r-3xl shadow-xl">
                       <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-light">
                         Accompagner nos partenaires dans la <span className="font-semibold text-orange-700">numérisation</span> et l'<span className="font-semibold text-orange-700">optimisation</span> de leurs processus, à travers des <span className="font-semibold">solutions intégrées</span> en informatique, réseaux et sécurité électronique, des plateformes et outils de communication unifiée, adaptés aux <span className="font-semibold">enjeux stratégiques et opérationnels</span>.
                       </p>

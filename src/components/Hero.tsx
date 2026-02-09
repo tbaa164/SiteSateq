@@ -52,16 +52,12 @@ export default function Hero() {
           {/* Background transparent pour afficher l'image de fond */}
           
           {/* Titre avec style spécifique pour mobile - Ombres modérées pour meilleure luminosité */}
-          <h1 className="text-[22px] md:text-4xl font-normal mb-1 sm:mb-4 mt-0 sm:mt-0 pt-0 sm:pt-0 relative z-10 leading-tight">
-            <span className="inline-block text-white">LES</span> <span className="text-white">TECHNOLOGIES DIGITALES</span>
+          <h1 className="text-[22px] md:text-4xl font-bold mb-1 sm:mb-4 mt-0 sm:mt-0 pt-0 sm:pt-0 relative z-10 leading-tight">
+            <span className="inline-block text-green-500">Société Africaine de Technologie et d'EQuipements</span>
           </h1>
-          <h2 className="text-[22px] md:text-4xl font-normal mb-1 sm:mb-6 relative z-10 leading-tight">
-            <span className="text-white">AU SERVICE DE L'ÉCONOMIE NUMÉRIQUE EN AFRIQUE</span>
+          <h2 className="text-[22px] md:text-3xl font-normal mb-1 sm:mb-6 relative z-10 leading-tight">
+            <span className="text-orange-500">La solution digitale au coeur de l'économie africaine</span>
           </h2>
-          <div className="space-y-2 sm:space-y-3 text-sm sm:text-2xl relative z-10 mb-1 sm:mb-0 mt-1 sm:mt-0">
-            <p className="text-white"><span className="font-normal">RÉSEAUX, IDENTITÉ & PAIEMENT ÉLECTRONIQUE</span></p>
-            <p className="text-white mt-1 sm:mt-0"><span className="font-normal">COMMUNICATION D'ENTREPRISE</span></p>
-          </div>
         </div>
       </section>
  {/* Enhanced Description Section with improved design - Full Width Layout, réduit espacement en haut pour mobile */}
@@ -129,7 +125,7 @@ export default function Hero() {
                 <div className="lg:w-3/4 pr-4">
                   <div className="space-y-4 text-gray-700 text-sm lg:text-base">
                     <p className="max-w-full text-justify">
-                      Il est clairement admis par tous que les technologies numériques ont radicalement transformé la gouvernance mondiale. Aucun secteur n'est épargné : les Etats, les entreprises et les populations au quotidien.
+                      Il est clairement admis par tous, que les technologies numériques ont radicalement transformé la gouvernance mondiale. Aucun secteur n'est épargné : les Etats, les entreprises et les populations au quotidien.
                     </p>
                     <p className="max-w-full text-justify">
                       Si bien qu'aujourd'hui, ce sont des systèmes électroniques et des plateformes digitales qui régissent l'économie mondiale et la circulation des biens et des personnes. Les systèmes d'identification par biométrie ou QR-Code, la carte bancaire, le mobile money et les réseaux sociaux ont fini de changer complètement le mode de vie de notre société.
@@ -146,9 +142,9 @@ export default function Hero() {
                     </p>
                     
                     {/* Signature */}
-                    <div className="pt-3 mt-1 text-right">
-                      <p className="font-bold text-gray-800">A.Tidiane WANE</p>
-                      <p className="text-gray-800">Administrateur Général</p>
+                    <div className="pt-1 mt-0 text-right">
+                      <img src="/logos/signature.png" alt="A.Tidiane WANE" className="ml-auto h-14 md:h-16 mb-1" />
+                      <p className="text-gray-800">Ingénieur, Administrateur General</p>
                     </div>
                   </div>
                 </div>

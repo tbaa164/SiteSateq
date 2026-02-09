@@ -40,6 +40,16 @@ const partners = [{
   color: "#FF9800",
   description: "Client"
 }, {
+  name: "Intouch",
+  logo: "intouchlogo.png",
+  color: "#00BCD4",
+  description: "Client"
+}, {
+  name: "UBA",
+  logo: "uba.png",
+  color: "#E00000",
+  description: "Client"
+}, {
   name: "EPS",
   logo: "eps.png",
   color: "#3F51B5",
@@ -157,9 +167,7 @@ export default function Partners() {
             </h2>
             <div className="h-1 w-8 bg-orange-500 rounded-full"></div>
           </div>
-          <p className="text-orange-500 text-sm md:text-base md:whitespace-nowrap md:overflow-x-auto no-scrollbar w-full px-2">
-            Ils nous font confiance pour leurs solutions technologiques et leurs projets de transformation digitale.
-          </p>
+         
         </div>
 
         {/* Carousel Container */}
@@ -194,7 +202,19 @@ export default function Partners() {
                         <img 
                           src={`/logos/${partner.logo}`} 
                           alt={partner.name} 
-                          className={`w-full h-full object-contain filter drop-shadow-sm ${partner.logo === 'mctn.png' ? 'scale-[2.5]' : ''}`}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'contain',
+                            transform: partner.logo === 'mctn.png' ? 'scale(1.5)' :
+                                      partner.logo === 'amsa.png' ? 'scale(1.5)' :
+                                      partner.logo === 'css.png' ? 'scale(2)' :
+                                      partner.logo === 'orangemoney.png' ? 'scale(0.75)' :
+                                      partner.logo === 'seter.png' ? 'scale(0.75)' :
+                                      partner.logo === 'justice.png' ? 'scale(0.75)' :
+                                      'scale(1)'
+                          }}
+                          className="filter drop-shadow-sm"
                           onError={(e) => {
                             // Fallback en cas d'échec de chargement de l'image
                             e.currentTarget.style.display = 'none';
