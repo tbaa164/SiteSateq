@@ -106,7 +106,7 @@ const QuiSommesNous = () => {
                   
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p className="text-base md:text-lg">
-                      Créée en <span className="font-semibold text-green-700">2009</span>, SATEQ DIGITAL GROUP accompagne la transformation numérique des administrations publiques et du secteur privé.
+                      Créée en 2009, <span className="font-bold text-green-700">SATEQ DIGITAL GROUP</span> accompagne la transformation numérique des administrations publiques et du secteur privé.
                     </p>
                     
                     <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">

@@ -25,8 +25,8 @@ const partners = [{
   color: "#FFC107",
   description: "Client"
 }, {
-  name: "ADER",
-  logo: "ader.png",
+  name: "DER",
+  logo: "der.png",
   color: "#E91E63",
   description: "Client"
 }, {
@@ -50,14 +50,9 @@ const partners = [{
   color: "#E00000",
   description: "Client"
 }, {
-  name: "EPS",
-  logo: "eps.png",
+  name: "EP Samsung",
+  logo: "epsamsung.png",
   color: "#3F51B5",
-  description: "Client"
-}, {
-  name: "Samsung",
-  logo: "samsung.png",
-  color: "#000080",
   description: "Client"
 }, {
   name: "Justice",
@@ -65,13 +60,13 @@ const partners = [{
   color: "#8B4513",
   description: "Client"
 }, {
-  name: "IPRES",
-  logo: "ipres.png",
+  name: "IPRESS",
+  logo: "ipress.png",
   color: "#00BCD4",
   description: "Client"
 }, {
-  name: "Caisse Mali",
-  logo: "caissemali.png",
+  name: "Caisse",
+  logo: "caisse.png",
   color: "#4CAF50",
   description: "Client"
 }, {
